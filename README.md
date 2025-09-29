@@ -34,24 +34,6 @@ Este projeto foi pensado xomo prototipo e simulação de uma aplicação real em
 
 ---
 
-## 🚀 Como Executar o Projeto
-
-1. Clone o repositório:
-```bash git clone https://github.com/seu-usuario/achados-e-perdidos.git
-
-2. Vá até a pasta do projeto:
-cd achados-e-perdidos
-
-3. Instale as dependências:
-npm install
-
-4. Inicie o projeto:
-npm run dev
-
-5. Acesse:
-http://localhost:3000
-
----
 
 ## 👩‍💻 Quem está por trás
 
@@ -71,3 +53,22 @@ Olá! Eu sou o Isabelly;
 [![LinkedIn](https://img.shields.io/badge/-LinkedIn-blue?style=flat-square&logo=linkedin&logoColor=white)](https://linkedin.com/in/)  
 [![Instagram](https://img.shields.io/badge/-Instagram-E4405F?style=flat-square&logo=instagram&logoColor=white)](https://instagram.com/)  
 [![GitHub](https://img.shields.io/badge/-GitHub-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/)
+
+---
+
+## 🚀 Como Executar o Projeto
+
+1. Clone o repositório:
+```bash git clone https://github.com/seu-usuario/achados-e-perdidos.git
+
+2. Vá até a pasta do projeto:
+cd achados-e-perdidos
+
+3. Instale as dependências:
+npm install
+
+4. Inicie o projeto:
+npm run dev
+
+5. Acesse:
+http://localhost:3000
