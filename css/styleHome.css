@@ -1,0 +1,145 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Arial', sans-serif;
+}
+
+/* header */
+.header {
+  background-color:rgb(255, 255, 255);
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  height: 30px;
+}
+.header-icons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.user {
+    height: 30px;
+    border-radius: 50%;
+}
+.icons {
+  margin-right: 10px;
+}
+.user-name {
+  font-size: 14px;
+}
+/* header */
+
+.hero {
+  background-color: #003c90;
+  color: white;
+  padding: 40px 40px;
+  height: 620px;
+  position: relative;
+  overflow: hidden;
+}
+.hero-text {
+  max-width: 700px;
+}
+.hero h1 {
+  font-size: 60px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+.hero p {
+  font-size: 19px;
+  margin-bottom: 30px;
+  line-height: 1.5;
+}
+.sherlock-box {
+  margin-top: 20px;
+  background-color: #6b88c7;
+  border-radius: 20px;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  width: fit-content;
+}
+
+.sherlock-box span {
+  font-size: 20px;
+  max-height: 90px;
+}
+
+.sherlock-img {
+  width: 150px;
+}
+
+.man-img {
+  position: absolute;
+  right: 60px;
+  top: 40px;
+  height: 250px;
+}
+
+.register-button {
+  position: absolute;
+  bottom: 20px;
+  right: 60px;
+  background: none;
+  border: 2px solid #f25c05;
+  color: #f25c05;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.register-button:hover {
+  background-color: #f25c05;
+  color: white;
+}
+
+.arrow-down {
+  position: absolute;
+  right: 25px;
+  bottom: 30px;
+  font-size: 28px;
+}
+
+.return-section {
+  background-color: #f5f5f5;
+  padding: 40px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.return-text h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.return-text p {
+  font-size: 14px;
+  color: #333;
+}
+
+.return-image {
+  position: relative;
+}
+
+.return-image img {
+  width: 200px;
+  border-radius: 10px;
+}
+.orange-arrow {
+  position: absolute;
+  top: 50%;
+  right: -30px;
+  transform: translateY(-50%);
+  font-size: 24px;
+  color: #f25c05;
+}
