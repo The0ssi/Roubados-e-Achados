@@ -1,0 +1,301 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color:rgb(240, 242, 247);
+}
+
+.container {
+  display: grid;                
+  grid-template-columns: 1fr;  
+  grid-template-rows: 1fr;     
+  justify-items: center;       
+  align-items: center;         
+  height: 80vh;               
+  width: 80vw;                
+  margin: 0 auto;
+  
+  
+
+
+    opacity: 0;
+  transform: translateY(50px); /* começa um pouco abaixo */
+  animation: appear 1s forwards; /* duração 1s, mantém estado final */
+}
+
+/* Definição da animação */
+@keyframes appear {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.content {
+  display: flex;
+  width: 100%;      
+  max-width: none;  
+  min-height: 800px;
+  background-color: #fff;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  flex-wrap: wrap;
+  margin: auto; /* <-- garante centralização vertical e horizontal */
+  margin-top: 70px;
+}
+
+
+
+/* Coluna esquerda */
+.left {
+  width: 50%;
+  min-width: 300px;
+  padding: 50px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.left .title {
+  color: #E84910;
+  font-size: 40px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Botão Google customizado */
+.google-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border: 1px solid #E84910;
+  background: transparent;
+  color: #E84910;
+  padding: 12px 25px;
+  border-radius: 25px;
+  font-size: 25 px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.google-btn i {
+  font-size: 18px;
+}
+
+.google-btn:hover {
+  background: #E84910;
+  color: #fff;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 300px;
+}
+
+.label-input {
+  display: flex;
+  align-items: center;
+  background: #f1f1f1;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  padding: 0 10px;
+}
+
+.label-input input {
+  border: none;
+  background: transparent;
+  padding: 12px;
+  flex: 1;
+  outline: none;
+}
+
+.icon-modify {
+  color: #E84910;
+}
+
+.btn {
+  background: #E84910;
+  border: none;
+  color: #fff;
+  padding: 12px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #c63b0d;
+}
+
+/* Coluna direita */
+.right {
+  width: 50%;
+  min-width: 300px;
+  background: #164194;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 50px 30px;
+}
+
+.right h2 {
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+
+.right p {
+  font-size: 15px;
+  line-height: 20px;
+  margin-bottom: 20px;
+}
+
+/* Imagem dos cachorros responsiva */
+.right img {
+  width: 100%;
+  max-width: 450px; /* limite máximo */
+  height: auto;     /* mantém proporção */
+  margin-top: 20px;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+    min-height: auto;
+  }
+
+  .left, .right {
+    width: 100%;
+    padding: 30px 20px;
+  }
+
+  .left .title {
+    font-size: 28px;
+  }
+
+  .right h2 {
+    font-size: 22px;
+  }
+
+  .right p {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .left .title {
+    font-size: 40px;
+  }
+
+  .right h2 {
+    font-size: 30px;
+  }
+
+  .right p {
+    font-size: 25px;
+  }
+
+  .google-btn {
+    padding: 10px 20px;
+    font-size: 20px;
+  }
+
+  .btn {
+    padding: 10px;
+    font-size: 20px;
+  }
+}
+/* Efeito digitando */
+.left .title {
+  color: #E84910;
+  font-size: 40px;
+  margin-bottom: 20px;
+  text-align: center;
+  white-space: nowrap;       /* evita quebra de linha */
+  overflow: hidden;          /* esconde o texto não digitado */
+  border-right: 4px solidrgb(255, 255, 255); /* cursor piscando */
+  width: 0;                  /* começa invisível */
+  animation: typing 3s steps(30, end) forwards, blink 0.7s step-end infinite;
+}
+
+/* Animação de digitação */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 18ch } /* ajuste para o tamanho do texto em caracteres */
+}
+
+/* Animação do cursor piscando */
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+.typing-text {
+  font-family: 'Open Sans', sans-serif;
+  color: #E84910;
+  font-size: 24px;
+  line-height: 1.5;
+}
+
+/* Cada linha com efeito digitando */
+.typing-text .line {
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 4px solid #E84910;
+  width: 0;
+  animation: typing 2s steps(40, end) forwards, blink 0.7s step-end infinite;
+}
+.typing-text {
+  font-family: 'Open Sans', sans-serif;
+  color: #E84910;
+  font-size: 24px;
+  line-height: 1.5;
+}
+
+/* Cada linha terá a animação digitando */
+.typing-text .line {
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 4px solid #E84910;
+  width: 0;
+  animation: typing 3s steps(40, end) forwards, blink 0.7s step-end infinite;
+}
+
+/* Cursor piscando */
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+/* Animação digitando: largura de 100% da linha */
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+/* Sequência das linhas com delay */
+.typing-text .line:nth-child(1) {
+  animation-delay: 0s;
+}
+.typing-text .line:nth-child(2) {
+  animation-delay: 3.5s; /* aparece após a primeira linha */
+}
+.typing-text .line:nth-child(3) {
+  animation-delay: 7s; /* aparece após a segunda linha */
+}
