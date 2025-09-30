@@ -1,0 +1,128 @@
+/* Fonte e reset */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #fffaf5;
+  color: #2e304bff;
+}
+
+/* Header */
+.topo {
+  background: #164194;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.topo h1 {
+  font-size: 1.8rem;
+  color: #000000ff; /* preto */
+}
+
+.topo nav a {
+  margin-left: 15px;
+  text-decoration: none;
+  color: #000000ff; /* preto */
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.topo nav a:hover {
+  color: #ff6600; /* laranja no hover */
+}
+
+/* Introdução */
+.intro {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.intro h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #000000ff; /* preto */
+}
+
+/* Cards */
+.cards {
+  display: flex;
+  flex-wrap: wrap; /* Faz os cards quebrarem em várias linhas se precisar */
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+  gap: 20px; /* Espaço entre cards */
+  padding: 20px;
+}
+
+
+.card {
+  background-color: #E84910 !important; /* força laranja */
+  color: #fffaf5;
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+  font-weight: bold;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+  position: relative; /* garante que fica acima */
+  z-index: 1;
+}
+.card {
+  flex: 1 1 200px; /* Cresce e encolhe, largura mínima de 200px */
+  max-width: 250px;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+/* Imagem */
+.box-grande {
+  display: flex;
+  justify-content: center;
+  margin: 40px 0;
+}
+
+.box-grande img {
+  width: 80%;
+  border-radius: 15px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+/* FAQ */
+.titulo-faq {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #000000ff; /* preto */
+}
+
+.accordion-button {
+  background: #1e90ff; /* azul */
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.accordion-button:focus {
+  box-shadow: none;
+}
+
+.accordion-body {
+  background: #fffaf5;
+  color: #000000ff;
+  font-size: 1.1rem;
+}
+.secao {
+    background-color: #f9efe5;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 12px;
+}
+
+.limitacoes {
+    border-left: 5px solid #E84910; /* destaque vermelho */
+}
+
+.dicas {
+    border-left: 5px solid #F4A261; /* destaque laranja */
+}
