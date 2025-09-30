@@ -1,0 +1,42 @@
+body {
+      background-color: #f8f9fa; 
+    }
+    
+    aside {
+      min-height: 100vh;
+    }
+
+.card-img-top {
+  width: 350px;  
+  height: 350px; 
+  object-fit: cover; 
+  border-radius: 40px; 
+  background-color: #e9ecef;
+}
+.card-text {
+    max-width:250px;
+
+}
+
+
+
+.pagination .page-item .page-link {
+  border-radius: 50%;
+  font-weight: bold;
+  border-color:rgba(241, 241, 241, 0);
+}
+
+.pagination .page-item.active .page-link {
+  background-color: #e74a3b;
+  color: white;
+  border-color: #e74a3b;
+}
+
+.pagination .page-item:hover .page-link {
+  background-color: #f1f1f1;
+  color: #6c757d;
+}
+
+
+
+
