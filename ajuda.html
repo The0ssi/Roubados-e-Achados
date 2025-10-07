@@ -5,118 +5,131 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ajuda - Itens Perdidos</title>
   <link rel="stylesheet" href="css/styleAjuda.css">
-  <!-- Bootstrap para o FAQ -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/2a37a60dfb.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
-  <!-- Seção Principal -->
+  <header class="header">
+    <img src="img/logoSenai.png" alt="Logo SENAI" class="logo">
+    <div class="header-icons">
+      <i class="fa-solid fa-house icons" style="color: #d65417;"></i>
+      <i class="fa-solid fa-bell icons" style="color: #d65417;"></i>
+      <img src="img/user.png" alt="foto de perfil" class="user">
+      <span class="user-name">Usuário Da Silva</span>
+    </div>
+  </header>
+
+  <!-- HERO (parte azul com setas e texto Ajuda) -->
+  <section class="hero">
+   
+
+    <div class="ajuda-centralizada">
+      <h1>Ajuda</h1>
+      <img src="img/ondas ajuda.png" alt="Onda decorativa" class="onda-img">
+ 
+    <div class="hero-text">
+      <img src="img/sherlock.png" alt="Sherlock cachorro" class="sherlock-img">
+      <img src="img/watson cachorro.png" alt="Watson cachorro" class="watson-img">
+    </div>
+  </section>
+
   <main class="container">
     <section class="intro">
       <h2>Encontre seu item com facilidade</h2>
       <p>
-        Nosso sistema de achados e perdidos foi criado para ajudar você a localizar objetos de forma simples e rápida.  
-        Confira abaixo como funciona e tire suas dúvidas mais comuns.
+Nosso sistema de Achados e Perdidos foi cuidadosamente desenvolvido para tornar a busca pelos seus objetos muito mais simples, rápida e eficiente. Com uma interface intuitiva, você pode registrar itens encontrados ou perdidos em poucos cliques, acompanhando todo o processo em tempo real. Nosso objetivo é oferecer uma experiência segura, organizada e transparente, garantindo que você recupere seus pertences com o mínimo de esforço.
+
+Confira abaixo como funciona nosso serviço e tire suas dúvidas mais comuns para aproveitar ao máximo nossa plataforma.
       </p>
     </section>
 
-    <!-- Cards -->
     <section class="cards">
-      <div class="card">🔍 Pesquise pelo nome ou descrição do item</div>
-      <div class="card">📦 Veja os itens mais recentes cadastrados</div>
-      <div class="card">📩 Registre um item perdido</div>
-      <div class="card">⚠️ Consulte as regras de cadastro</div>
+      <div class="card">Pesquise pelo nome ou descrição do item</div>
+      <div class="card">Veja os itens mais recentes cadastrados</div>
+      <div class="card">Registre um item perdido ou roubado</div>
+      <div class="card">Ajude a encontrar objetos desaparecidos</div>
     </section>
 
-    <!-- Imagem destaque -->
     <section class="box-grande">
       <img src="img/Gemini_Generated_Image_20yvae20yvae20yv.png" alt="Imagem do sistema de achados e perdidos">
     </section>
 
-    <!-- FAQ -->
     <section class="faq mt-5">
       <h2 class="titulo-faq">Perguntas Frequentes</h2>
-<div class="accordion" id="faqAccordion">
-    <!-- Pergunta 1 -->
-    <div class="accordion-item">
-        <h2 class="accordion-header" id="faq1">
+
+      <div class="accordion" id="faqAccordion">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="faq1">
             <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="true">
-                🔍 Como posso procurar por um item perdido no site?
+               Como posso procurar por um item perdido no site?
             </button>
-        </h2>
-        <div id="collapse1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+          </h2>
+          <div id="collapse1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
             <div class="accordion-body">
-                Nosso sistema de achados e perdidos foi desenvolvido para ajudar você a encontrar objetos rapidamente.  
-                Basta usar a barra de busca no topo da página, digitando o nome ou descrição do item.  
-                Você pode filtrar por categoria, data ou localização para otimizar a pesquisa.  
-                Além disso, nossa plataforma atualiza automaticamente a lista de itens encontrados para garantir que você tenha sempre as informações mais recentes.
+              Nosso sistema foi desenvolvido para ajudar você a encontrar objetos rapidamente.  
+              Basta usar a barra de busca, digitando o nome ou descrição do item.  
+              Você pode filtrar por categoria, data ou localização.  
+              A lista é atualizada automaticamente.
             </div>
+          </div>
         </div>
-    </div>
 
-    <!-- Pergunta 2 -->
-    <div class="accordion-item">
-        <h2 class="accordion-header" id="faq2">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="faq2">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2">
-                📦 O que fazer se não encontrar meu item na lista?
+               O que fazer se não encontrar meu item na lista?
             </button>
-        </h2>
-        <div id="collapse2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          </h2>
+          <div id="collapse2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
             <div class="accordion-body">
-                Caso não encontre seu item na lista, não se preocupe!  
-                Nosso banco de dados é atualizado constantemente, então vale a pena verificar novamente mais tarde.  
-                Você também pode registrar uma descrição detalhada do objeto perdido em nosso formulário de cadastro.  
-                Isso ajuda nossa equipe e outros usuários a identificarem e notificarem quando o item aparecer.  
-                Lembre-se de incluir características únicas como cor, marca, tamanho ou número de série.
+              Caso não encontre seu item, volte a verificar mais tarde — o banco de dados é atualizado constantemente.  
+              Você também pode registrar um novo item perdido com detalhes como cor, marca e local.  
             </div>
+          </div>
         </div>
-    </div>
 
-    <!-- Pergunta 3 -->
-    <div class="accordion-item">
-        <h2 class="accordion-header" id="faq3">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="faq3">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3">
-                📩 Posso registrar que perdi um item?
+               Posso registrar que perdi um item?
             </button>
-        </h2>
-        <div id="collapse3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          </h2>
+          <div id="collapse3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
             <div class="accordion-body">
-                Sim! É muito simples.  
-                Vá até a seção "Registrar Item Perdido" no site, preencha o formulário com todas as informações relevantes — incluindo descrição detalhada, data, local aproximado e uma foto, se possível.  
-                Após o cadastro, seu item será adicionado ao nosso banco de dados e ficará disponível para consulta.  
-                Assim, qualquer usuário que encontrar algo parecido poderá entrar em contato diretamente com você.
+              Sim! Vá até a seção “Registrar Item Perdido”, preencha o formulário e anexe uma foto.  
+              Seu item ficará disponível para que outros usuários possam ajudar a encontrá-lo.
             </div>
+          </div>
         </div>
-    </div>
 
-    <!-- Pergunta 4 -->
-    <div class="accordion-item">
-        <h2 class="accordion-header" id="faq4">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="faq4">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4">
-                ⚠️ Existem itens que não podem ser cadastrados por alunos?
+              Existem itens que não podem ser cadastrados por alunos?
             </button>
-        </h2>
-        <div id="collapse4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          </h2>
+          <div id="collapse4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
             <div class="accordion-body">
-                Sim, por questões legais, de segurança e privacidade, certos itens como (RG, CPF, passaporte), itens perigosos ou ilegais, e objetos que contenham informações confidenciais, devem ser entregues a Nancy,
-                nosso objetivo é garantir que o processo de registro seja seguro para todos os usuários.  
+              Sim, documentos pessoais (RG, CPF, passaporte) e itens ilegais devem ser entregues à coordenação (Nancy).  
+              Isso garante segurança e privacidade para todos os usuários.
             </div>
+          </div>
         </div>
+      </div>
+    </section>
+
+    <div class="secao limitacoes">
+      <h2>Limitações</h2>
+      <p>Alguns itens não podem ser aceitos no sistema por questões de segurança.</p>
     </div>
-</div>
 
- 
-  
-<div class="secao limitacoes">
-    <h2>Limitações</h2>
-    <p>Alguns itens não podem ser aceitos no sistema por questões de segurança.</p>
-</div>
+    <div class="secao dicas">
+      <h2>Dicas</h2>
+      <p>Use palavras-chave específicas e verifique a lista de novos itens regularmente.</p>
+    </div>
+  </main>
 
-<div class="secao dicas">
-    <h2>Dicas</h2>
-    <p>Use palavras-chave específicas e verifique a lista de novos itens regularmente.</p>
-</div>
-
-  <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-
+</body>
 </html>
