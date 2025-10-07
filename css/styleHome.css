@@ -3,7 +3,6 @@
   padding: 0;
   box-sizing: border-box;
 }
-
 body {
   font-family: 'Arial', sans-serif;
 }
@@ -16,22 +15,18 @@ body {
   justify-content: space-between;
   align-items: center;
 }
-
 .logo {
   height: 30px;
 }
-
 .header-icons {
   display: flex;
   align-items: center;
   gap: 15px;
 }
-
 .user {
   height: 30px;
   border-radius: 50%;
 }
-
 .user-name {
   font-size: 14px;
 }
@@ -48,19 +43,16 @@ body {
   flex-direction: column;
   justify-content: flex-start;
 }
-
 .hero-text {
   max-width: 750px;
   z-index: 2;
 }
-
 .hero h1 {
   font-size: 61px;
   font-weight: 700;
   margin-bottom: 25px;
   line-height: 1.2;
 }
-
 .hero p {
   font-size: 18px;
   margin-bottom: 35px;
@@ -68,8 +60,6 @@ body {
   color: #dbe6ff;
   max-width: 620px;
 }
-
-/* Sherlock box refinado */
 .sherlock-box {
   background-color: #6b88c7;
   border-radius: 18px;
@@ -80,14 +70,12 @@ body {
   width: 615px;
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
 }
-
 .sherlock-img {
-  width: 130px; /* menor e proporcional */
+  width: 130px;
   height: auto;
 }
-
 .sherlock-box span {
-  font-size: 20px; /* maior, mas ainda menor que a legenda principal */
+  font-size: 20px; 
   line-height: 1.4;
   color: #ffffff;
   font-weight: 400;
@@ -104,16 +92,14 @@ body {
   height: 550px;
   z-index: 1;
 }
-
-/* Retângulo arredondado branco colado na direita */
 .bottom-curve {
   position: absolute;
   bottom: 0;
-  right: 0; /* 👈 Agora gruda no lado direito */
+  right: 0;
   width: 600px;
   height: 100px;
   background: #f3f3f3;
-  border-radius: 60px 0 0 0; /* arredondado só no lado esquerdo superior */
+  border-radius: 60px 0 0 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -122,7 +108,9 @@ body {
   padding-bottom: 10px;
 }
 
-/* Botão “Registra item” */
+
+
+
 .register-button {
   background: #ffffff;
   border: 2px solid #f25c05;
