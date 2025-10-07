@@ -3,122 +3,170 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
   font-family: 'Arial', sans-serif;
 }
 
-/* header */
+/* HEADER */
 .header {
-  background-color:rgb(255, 255, 255);
+  background-color: #fff;
   padding: 10px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+
 .logo {
   height: 30px;
 }
+
 .header-icons {
   display: flex;
   align-items: center;
   gap: 15px;
 }
+
 .user {
-    height: 30px;
-    border-radius: 50%;
+  height: 30px;
+  border-radius: 50%;
 }
-.icons {
-  margin-right: 10px;
-}
+
 .user-name {
   font-size: 14px;
 }
-/* header */
 
+/* HERO */
 .hero {
   background-color: #003c90;
   color: white;
-  padding: 40px 40px;
-  height: 620px;
+  padding: 60px 50px 160px;
+  height: 650px;
   position: relative;
   overflow: hidden;
-}
-.hero-text {
-  max-width: 700px;
-}
-.hero h1 {
-  font-size: 60px;
-  margin-bottom: 20px;
-  font-weight: bold;
-}
-.hero p {
-  font-size: 19px;
-  margin-bottom: 30px;
-  line-height: 1.5;
-}
-.sherlock-box {
-  margin-top: 20px;
-  background-color: #6b88c7;
-  border-radius: 20px;
-  padding: 10px 20px;
   display: flex;
-  align-items: center;
-  gap: 15px;
-  width: fit-content;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
-.sherlock-box span {
-  font-size: 20px;
-  max-height: 90px;
+.hero-text {
+  max-width: 750px;
+  z-index: 2;
+}
+
+.hero h1 {
+  font-size: 61px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  line-height: 1.2;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 35px;
+  line-height: 1.5;
+  color: #dbe6ff;
+  max-width: 620px;
+}
+
+/* Sherlock box refinado */
+.sherlock-box {
+  background-color: #6b88c7;
+  border-radius: 18px;
+  padding: 5px 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 615px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
 }
 
 .sherlock-img {
-  width: 150px;
+  width: 130px; /* menor e proporcional */
+  height: auto;
 }
 
+.sherlock-box span {
+  font-size: 20px; /* maior, mas ainda menor que a legenda principal */
+  line-height: 1.4;
+  color: #ffffff;
+  font-weight: 400;
+  display: inline-block;
+  margin: 20px;
+}
+
+
+/* Homem */
 .man-img {
   position: absolute;
-  right: 60px;
-  top: 40px;
-  height: 250px;
+  right: 200px;
+  top: 15px;
+  height: 550px;
+  z-index: 1;
 }
 
-.register-button {
+/* Retângulo arredondado branco colado na direita */
+.bottom-curve {
   position: absolute;
-  bottom: 20px;
-  right: 60px;
-  background: none;
+  bottom: 0;
+  right: 0; /* 👈 Agora gruda no lado direito */
+  width: 600px;
+  height: 100px;
+  background: #f3f3f3;
+  border-radius: 60px 0 0 0; /* arredondado só no lado esquerdo superior */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+  box-shadow: 0 -2px 10px rgba(0,0,0,0.05);
+  padding-bottom: 10px;
+}
+
+/* Botão “Registra item” */
+.register-button {
+  background: #ffffff;
   border: 2px solid #f25c05;
   color: #f25c05;
-  padding: 10px 20px;
-  border-radius: 25px;
   font-size: 16px;
+  width: 500px;
+  height: 65px;
+  font-weight: bold;
+  padding: 15px 50px;
+  border-radius: 40px;
+  margin-bottom: 0px;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: 0.3s;
 }
 
 .register-button:hover {
   background-color: #f25c05;
-  color: white;
+  color: #fff;
 }
 
+/* Seta */
 .arrow-down {
   position: absolute;
-  right: 25px;
-  bottom: 30px;
-  font-size: 28px;
+  top: 450px;
+  right: 50px;/* centraliza a seta em relação ao bloco */
+  transform: translateX(50%);
+  color: white;
+}
+.seta{
+  width: 80px;
 }
 
+
+/* Seção de devolução */
 .return-section {
   background-color: #f5f5f5;
-  padding: 40px 20px;
+  padding: 60px 80px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 .return-text h2 {
-  font-size: 24px;
+  font-size: 26px;
   margin-bottom: 10px;
 }
 
@@ -132,9 +180,10 @@ body {
 }
 
 .return-image img {
-  width: 200px;
+  width: 220px;
   border-radius: 10px;
 }
+
 .orange-arrow {
   position: absolute;
   top: 50%;
