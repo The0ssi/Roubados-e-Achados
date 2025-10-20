@@ -227,15 +227,145 @@ body {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+
 /* Responsividade */
 @media (max-width: 768px) {
   .card {
     width: 48%;
   }
 }
+.card-image img{
+  max-width:320px;
+  min-width:300px;
 
+}
 @media (max-width: 480px) {
   .card {
     width: 100%;
   }
+}
+
+
+
+
+
+
+
+
+/* Resetando margens e preenchimentos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Definindo a aparência da paginação */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.pagination a {
+    padding: 10px;
+    margin: 0 5px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #333;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.pagination .active {
+    background-color: #f76b29;
+    color: white;
+}
+
+.pagination .prev, .pagination .next {
+    font-size: 24px;
+}
+
+.pagination a:hover {
+    background-color: #ddd;
+}
+
+/* Resetando estilos padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+
+
+
+
+
+.footer {
+    background-color: #003B5C;
+    color: white;
+    padding: 20px 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Topo do rodapé - logo esquerda e redes sociais direita */
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    max-width: 13500px;
+    margin: 0 auto 15px auto;
+}
+
+.footer-logo {
+    height: 50px;
+}
+
+/* Redes sociais */
+.footer-social {
+    display: flex;
+    gap: 50px;
+}
+
+.footer-social img {
+    width: 22px;
+    height: 22px;
+    transition: opacity 0.3s;
+}
+
+.footer-social a:hover img {
+    opacity: 0.7;
+}
+
+/* Rodapé inferior - texto e links alinhados nas extremidades */
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    max-width: 13500px;
+    margin: 0 auto;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+.footer-bottom .footer-left p {
+    margin: 0;
+}
+
+.footer-right a {
+    color: white;
+    text-decoration: none;
+    margin-left: 30px;
+    white-space: nowrap; /* Para não quebrar linhas */
+}
+
+.footer-right a:hover {
+    opacity: 0.7;
 }
