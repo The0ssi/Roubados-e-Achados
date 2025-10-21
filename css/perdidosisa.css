@@ -1,0 +1,457 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #f4f1f1;
+}
+
+/* HEADER */
+.header {
+  background-color: #f4f1f1;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  height: 30px;
+}
+.header-icons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.user {
+  height: 30px;
+  border-radius: 50%;
+}
+.user-name {
+  font-size: 14px;
+}
+
+/* HERO */
+.hero {
+  background-color: #003c90;
+  color: #f4f1f1;
+  padding: 60px 50px 160px;
+  height: 450px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+/* Título */
+.hero h1 {
+  font-size: 70px;  /* Tamanho ajustado do título */
+  font-weight: 700;
+  margin-bottom: 20px; /* Ajustado para o espaçamento correto */
+  line-height: 1.1;
+  color: #f4f1f1;
+  text-align: center; /* Centralizado no meio da tela */
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translateX(-50%); /* Centraliza horizontalmente */
+}
+
+/* Ajuste nas setas */
+.seta {
+  width: 120px;
+  position: absolute;
+  z-index: 1;
+}
+.seta-superior1 {
+  bottom: 40px;
+  left: -20;
+}
+.seta-superior2 {
+  bottom: 40px;
+  left: 180px;
+}
+.seta-inferior1 {
+  top: 30px;
+  right: 50px;
+}
+.seta-inferior2 {
+  top: 30px;
+  right: 180px; 
+}
+
+/* Tabs (Botões de menu) */
+.tabs {
+  background-color: #f4f1f1;
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  padding: 20px 0;
+  border-top-left-radius: 40px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 700px; /* Ajustado para o tamanho dos botões */
+  height: 90px;
+}
+
+.tab-button {
+  background: none;
+  border: none;
+  font-size: 18px;
+  font-weight: bold;
+  color: #f25c05;
+  padding: 10px 20px;
+  cursor: pointer;
+  position: relative;
+}
+
+.tab-button.active::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: #f25c05;
+  border-radius: 2px;
+}
+
+.tab-button:hover {
+  color: #f25c05;
+  transition: color 0.3s ease;
+}
+
+/* Remover a curva da parte inferior original */
+.bottom-curve {
+  display: none;
+}
+
+/* Sombra das setas */
+.seta-superior, .seta-inferior {
+  box-shadow: 0 0 5px rgba(0,0,0,0.2);
+}
+
+.filtro-container {
+  width: 250px;
+  padding: 20px;
+  background-color: #f4f1f1;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  color: #333;
+  margin-top:20px;
+}
+
+.filtro-titulo {
+  font-size: 18px;
+  margin-bottom: 20px;
+  padding-bottom: 5px;
+}
+
+.filtro-secao {
+  margin-bottom: 25px;
+}
+
+.filtro-subtitulo {
+  font-weight: bold;
+  font-size: 14px;
+  margin-bottom: 10px;
+  padding-top: 20px;
+  border-top: 1px solid #5c3c2f;
+}
+
+.filtro-checkbox {
+  display: block;
+  margin-bottom: 8px;
+  cursor: pointer;
+}
+
+.filtro-checkbox input[type="checkbox"] {
+  margin-right: 8px;
+  transform: scale(1.1);
+}
+
+.filtro-input {
+  width: 100%;
+  padding: 6px;
+  margin-bottom: 10px;
+  border: 1px solid #aaa;
+  border-radius: 2px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.filtro-ellipsis {
+  display: block;
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+
+/* Definindo a estrutura do layout */
+.main-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 30px;
+}
+
+/* Container dos filtros */
+.filtro-container {
+  width: 250px;
+  padding: 20px;
+  background-color: #f4f1f1;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  color: #333;
+  flex-shrink: 0; /* Evita que a barra de filtro encolha */
+}
+.card-container {
+  display: flex;
+  gap: 20px;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  margin-top: 25px;
+
+}
+
+.card {
+  width: 98%;
+  border-radius: 15px;
+  overflow: hidden;
+  background-color: #f4f1f1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .card {
+    width: 48%;
+  }
+}
+@media (max-width: 480px) {
+  .card {
+    width: 100%;
+  }
+}
+.card {
+  width: 98%;
+  border-radius: 15px;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.card-image {
+  position: relative;
+  width: 379px;
+  height: 300px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  overflow: hidden;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* preenche e recorta sem distorcer */
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 8px 0;
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 600;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  user-select: none;
+}
+
+.card-description {
+  padding: 20px;
+  color: #333;
+  background-color: #f4f1f1;
+}
+.fa-user,.glyphicon{
+    margin-right:10px;
+}
+
+
+
+
+
+
+
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo */
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Paginador */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px; /* centraliza verticalmente */
+    gap: 8px; /* espaço entre botões */
+}
+
+/* Botões padrão */
+.pagination a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #333;
+   
+    border-radius: 50%;
+    transition: all 0.2s ease;
+}
+
+/* Botão ativo */
+.pagination .active {
+    background-color: #f76b29;
+    color: white;
+    border-color: #f76b29;
+}
+
+/* Setas (sem borda, mas mesmo tamanho) */
+.pagination .prev,
+.pagination .next {
+    border: none;
+    background-color: transparent;
+    font-size: 28px;
+    width: 40px;
+    height: 40px;
+    color:#333;
+}
+
+/* Hover */
+.pagination a:hover {
+    background-color: #ddd;
+}
+
+/* Hover nas setas */
+.pagination .prev:hover,
+.pagination .next:hover {
+    background-color: transparent;
+    color: #c95b1f;
+}
+
+
+
+
+
+/*RodaPÉ*/
+.footer {
+  background-color: #204B8C;
+  color: white;
+  font-family: "Segoe UI", sans-serif;
+  padding: 25px 0 15px 0;
+  width: 100%;
+}
+
+/* Parte de cima */
+.footer-container {
+  display: flex;
+  justify-content: space-between; /* manda um pra cada canto */
+  align-items: center;
+  width: 100%; /* ocupa 100% da tela */
+  padding: 0 40px; /* espaçamento lateral */
+  font-size: 13px;
+  box-sizing: border-box;
+}
+
+.footer-logo {
+  height: 45px;
+}
+
+.footer-social {
+  display: flex;
+  gap: 12px;
+}
+
+.footer-social a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  color: #204B8C;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  font-size: 14px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.footer-social a:hover {
+  background-color: #d9d9d9;
+}
+
+/* Linha divisória */
+.footer-divider {
+  width: 95%;
+  margin: 15px auto;
+  border: 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Parte inferior – ocupa toda a largura */
+.footer-bottom {
+  display: flex;
+  justify-content: space-between; /* manda um pra cada canto */
+  align-items: center;
+  width: 100%; /* ocupa 100% da tela */
+  padding: 0 40px; /* espaçamento lateral */
+  font-size: 13px;
+  box-sizing: border-box;
+}
+
+.footer-bottom p {
+  margin: 0;
+  text-align: left;
+}
+
+.footer-links {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-align: right;
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
