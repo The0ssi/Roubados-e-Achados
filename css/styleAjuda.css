@@ -1,11 +1,10 @@
 body {
   margin: 0;
-  font-family: 'Arial', sans-serif;
+  font-family: "Arial", sans-serif;
   background-color: #fffaf5;
   color: #2e304bff;
 }
 
-/* HEADER */
 .header {
   background-color: #fff;
   padding: 10px 20px;
@@ -35,7 +34,6 @@ body {
   font-size: 14px;
 }
 
-/* HERO */
 .hero {
   background-color: #003c90;
   color: white;
@@ -48,8 +46,6 @@ body {
   align-items: center;
 }
 
-
-/* AJUDA CENTRALIZADA */
 .ajuda-centralizada {
   text-align: center;
   color: #ffffffff;
@@ -65,15 +61,13 @@ body {
 
 .onda-img {
   position: absolute;
-  top: 90px;          /* distância do topo da tela */
-  left: 50%;          /* centraliza horizontalmente */
-  transform: translateX(-50%); /* corrige o alinhamento central */
-  width: 350px;       /* tamanho da imagem */
-  margin-top: 30px;   /* espaçamento extra opcional */
+  top: 90px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 350px;
+  margin-top: 30px;
 }
 
-
-/* IMAGENS SHERLOCK/WATSON */
 .sherlock-img {
   width: 190px;
   position: absolute;
@@ -89,7 +83,6 @@ body {
   transform: translateY(35px);
 }
 
-/* INTRO */
 .intro {
   text-align: center;
   padding: 40px 20px;
@@ -101,7 +94,7 @@ body {
   color: #000000ff;
 }
 
-/* CARDS */
+
 .cards {
   display: flex;
   flex-wrap: wrap;
@@ -112,13 +105,13 @@ body {
 }
 
 .card {
-  background-color: #E84910 !important; /* cor do quadrado */
-  color: #ffffff !important; /* texto branco */
+  background-color: #e84910 !important;
+  color: #ffffff !important;
   padding: 20px;
   border-radius: 15px;
   text-align: center;
   font-weight: bold;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* sombra mais visível */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
   flex: 1 1 200px;
   max-width: 250px;
   transition: transform 0.3s;
@@ -128,8 +121,6 @@ body {
   transform: scale(1.05);
 }
 
-
-/* IMAGEM CENTRAL */
 .box-grande {
   display: flex;
   justify-content: center;
@@ -139,10 +130,9 @@ body {
 .box-grande img {
   width: 80%;
   border-radius: 15px;
-  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
-/* FAQ */
 .titulo-faq {
   text-align: center;
   margin-bottom: 20px;
@@ -162,7 +152,6 @@ body {
   font-size: 1.1rem;
 }
 
-/* SEÇÕES FINAIS */
 .secao {
   background-color: #f9efe5;
   padding: 20px;
@@ -171,11 +160,11 @@ body {
 }
 
 .limitacoes {
-  border-left: 5px solid #E84910;
+  border-left: 5px solid #e84910;
 }
 
 .dicas {
-  border-left: 5px solid #E84910;
+  border-left: 5px solid #e84910;
 }
 
 .hero {
@@ -209,5 +198,5 @@ body {
 }
 .seta-inferior2 {
   top: 30px;
-  right: 180px; 
+  right: 180px;
 }
