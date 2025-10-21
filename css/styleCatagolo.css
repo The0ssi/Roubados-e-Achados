@@ -247,7 +247,7 @@ body {
   background: #fff;
   display: flex;
   flex-direction: column;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  
 }
 
 .card-image {
@@ -451,4 +451,7 @@ body {
 
 .footer-links a:hover {
   text-decoration: underline;
+}
+.fa-user,.glyphicon{
+    margin-right:10px;
 }
