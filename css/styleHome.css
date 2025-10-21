@@ -5,6 +5,7 @@
 }
 body {
   font-family: 'Arial', sans-serif;
+  background-color: #f5f5f5;
 }
 
 /* HEADER */
@@ -188,7 +189,6 @@ body {
   background: #f5f5f5;
   font-family: "Inter", sans-serif;
 }
-
 /* filtros */
 .filtros {
   display: flex;
@@ -253,7 +253,7 @@ body {
 }
 .card {
   width: 300px;
-  height: 260px;
+  height: 240px;
   background: #011130;
   color: #fff;
   border-radius: 16px;
@@ -281,18 +281,18 @@ body {
   transition: all 0.3s ease;
 }
 .card-top h3 {
-    font-size: 24px;
+  font-size: 24px;
 }
 .meta,
 .card-footer .date {
-    opacity: 0;
-    transition: opacity 0.3s ease;
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 .card:hover {
-    width: 400px;
-    background: #164194;
-    z-index: 10;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  width: 400px;
+  background: #164194;
+  z-index: 10;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 .card:hover .card-top .arrow {
   opacity: 1;
@@ -320,25 +320,25 @@ body {
   font-size: 0.85rem;
 }
 .pill {
-    background: rgba(255, 255, 255, 0.15);
-    padding: 6px 10px;
-    border-radius: 20px;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 6px 10px;
+  border-radius: 20px;
 }
 .date {
-    opacity: 0.9;
-    font-size: 0.85rem;
+  opacity: 0.9;
+  font-size: 0.85rem;
 }
 .card h3,
 .card p {
-    transition: color 0.3s ease;
+  transition: color 0.3s ease;
 }
 .card:hover h3 {
-    color: #fff;
+  color: #fff;
 }
 .card p {
-    font-size: 14px;
-    line-height: 1.5;
-    margin: 10px 0;
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 10px 0;
 }
 .meta {
   display: flex;
@@ -352,10 +352,10 @@ body {
   margin-right: 20px;
 }
 .meta-item .icon {
-    margin-right: 5px;
+  margin-right: 5px;
 }
 .card:hover {
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 .fa-user, 
 .fa-location-dot{
@@ -363,3 +363,143 @@ body {
 }
 /* card */
 /* ACHADOS */
+
+/* PERDIDOS */
+.perdido{
+  background: #300101;
+}
+.perdido:hover{
+  background: #D65417;
+}
+.perdidos-title {
+  margin-right: 20px;
+}
+.perdidos {
+  display: flex;
+  flex-direction: column;
+  margin: 70px 40px;
+  gap: 40px;
+  background-color: #f5f5f5;
+}
+.perdidos-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap; 
+  gap: 20px;
+}
+.perdidos-title h2 {
+  font-size: 40px;
+  font-weight: bold;
+  margin: 0;
+}
+.perdidos-content p {
+  font-size: 15px;
+  line-height: 1.6;
+  max-width: 40rem;
+  margin: 0;
+}
+.fa-calendar,
+.fa-clock{
+  margin-right: 10px;
+}
+/* PERDIDOS */
+
+
+/* BOLINHA */
+.pagination-dots {
+  text-align: center;
+  margin-top: 20px;
+}
+.dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 0 3px;
+  background-color: #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.dot.active {
+  background-color: #D65417; 
+  width: 30px;
+  border-radius: 10px;
+}
+/* BOLINHA */
+
+
+/* RODAPÉ */
+.footer {
+  background-color: #204B8C;
+  color: white;
+  font-family: "Segoe UI", sans-serif;
+  padding: 50px 0 15px 0;
+  width: 100%;
+}
+.footer-container {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  width: 100%; 
+  padding: 0 40px;
+  font-size: 13px;
+  box-sizing: border-box;
+}
+.footer-logo {
+  height: 45px;
+}
+.footer-social {
+  display: flex;
+  gap: 12px;
+}
+.footer-social a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  color: #204B8C;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  font-size: 14px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+.footer-social a:hover {
+  background-color: #d9d9d9;
+}
+.footer-divider {
+  width: 95%;
+  margin: 15px auto;
+  border: 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+.footer-bottom {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  width: 100%; 
+  padding: 0 40px; 
+  font-size: 13px;
+  box-sizing: border-box;
+  margin-bottom:40px;
+}
+.footer-bottom p {
+  margin: 0;
+  text-align: left;
+}
+.footer-links {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-align: right;
+}
+.footer-links a {
+  color: white;
+  text-decoration: none;
+}
+.footer-links a:hover {
+  text-decoration: underline;
+}
+/* RODAPÉ */
