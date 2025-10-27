@@ -4,25 +4,24 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Item achado</title>
-  <link rel="stylesheet" href="/Roubados-e-Achados-main/css/stylep.css">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
   <script src="https://accounts.google.com/gsi/client" async defer></script>
+  <link rel="stylesheet" href="css/stylep.css">
 </head>
 <body>
 
-  <!-- Header -->
+  <!--HEADER-->
   <header class="header">
-    <img src="/Roubados-e-Achados-main/img/Logo-novo-SENAI_-sem-slogan_755X325.png" alt="Logo SENAI" class="logo">
-
+    <img src="img/logoSenai.png" alt="Logo SENAI" class="logo">
     <div class="header-icons">
-      <i class="fas fa-home"></i>
-      <i class="fas fa-bell"></i>
-      <div class="user-profile">
-        <i class="fas fa-user"></i>
-        <span>Usuario Da Silva</span>
-      </div>
+      <i class="fa-solid fa-house icons" style="color: #d65417;"></i>
+      <i class="fa-solid fa-bell icons" style="color: #d65417;"></i>
+      <img src="img/user.png" alt="foto de perfil" class="user">
+      <span class="user-name">Usuário Da Silva</span>
     </div>
   </header>
+  <!--HEADER-->
 
   <!-- Conteúdo principal -->
   <main class="container">
@@ -65,113 +64,155 @@
       </div>
     </section>
 
-    <!-- Cards -->
-    <section class="cards">
-      <div class="card">
-        <h3>Fone de ouvido</h3>
-        <p>Fone de ouvido bluetooth rosa. Tem adesivos colados atrás.</p>
-        <div class="card-info">
-          <span><i class="fas fa-user"></i> Carmem</span>
-          <span><i class="fas fa-map-marker-alt"></i> Refeitório</span>
-        </div>
-        <div class="card-footer">
-          <i class="fas fa-user-circle"></i> Card usuário - 25/09
-        </div>
+    <!--CONTAINER CARD-->
+    <div class="cards-wrapper">
+      <!--SETAS-->
+      <div class="navigation">
+        <i class="fa-solid fa-chevron-left fa-2xl" style="color: #d65417;" id="seta-left"></i>
+        <i class="fa-solid fa-chevron-right fa-2xl" style="color: #d65417;" id="seta-right"></i>
       </div>
 
-      <div class="card">
-        <h3>Fone de ouvido</h3>
-        <p>Fone de ouvido bluetooth rosa. Tem adesivos colados atrás.</p>
-        <div class="card-info">
-          <span><i class="fas fa-user"></i> Carmem</span>
-          <span><i class="fas fa-map-marker-alt"></i> Refeitório</span>
-        </div>
-        <div class="card-footer">
-          <i class="fas fa-user-circle"></i> Card usuário - 25/09
-        </div>
+      <!--CONTAINER CARD 2-->
+      <div class="cards-container">
+        <!--CARD-->
+        <article class="card achado">
+          <header class="card-top">
+              <h3>Fone de ouvido</h3>
+          </header>
+          <div class="card-body">
+            <p class="descricao">
+            Fone de ouvido genérico, modelo intra-auricular (de entrada no ouvido), com fio. Cor predominante preto de plástico e borracha de silicone nas ponteiras.
+            </p>
+            <div class="meta">
+              <div class="meta-item"><i class="fa-solid fa-user" style="color: #ffffff;"></i></span> Irmão de bota</div>
+              <div class="meta-item"><i class="fa-solid fa-location-dot" style="color: #ffffff;"></i> DS</div>
+            </div>
+            <div class="card-sep"></div>
+            <div class="card-footer">
+              <span class="pill">Card usuário</span>
+              <span class="date">25 / 09</span>
+            </div>
+          </div>
+        </article>
+        <!--CARD-->
+        <!--CARD-->
+        <article class="card achado">
+          <header class="card-top">
+              <h3>Fone de ouvido</h3>
+          </header>
+          <div class="card-body">
+            <p class="descricao">
+            Fone de ouvido genérico, modelo intra-auricular (de entrada no ouvido), com fio. Cor predominante preto de plástico e borracha de silicone nas ponteiras.
+            </p>
+            <div class="meta">
+              <div class="meta-item"><i class="fa-solid fa-user" style="color: #ffffff;"></i></span> Irmão de bota</div>
+              <div class="meta-item"><i class="fa-solid fa-location-dot" style="color: #ffffff;"></i> DS</div>
+            </div>
+            <div class="card-sep"></div>
+            <div class="card-footer">
+              <span class="pill">Card usuário</span>
+              <span class="date">25 / 09</span>
+            </div>
+          </div>
+        </article>
+        <!--CARD-->
+        <!--CARD-->
+        <article class="card achado">
+          <header class="card-top">
+              <h3>Fone de ouvido</h3>
+          </header>
+          <div class="card-body">
+            <p class="descricao">
+            Fone de ouvido genérico, modelo intra-auricular (de entrada no ouvido), com fio. Cor predominante preto de plástico e borracha de silicone nas ponteiras.
+            </p>
+            <div class="meta">
+              <div class="meta-item"><i class="fa-solid fa-user" style="color: #ffffff;"></i></span> Irmão de bota</div>
+              <div class="meta-item"><i class="fa-solid fa-location-dot" style="color: #ffffff;"></i> DS</div>
+            </div>
+            <div class="card-sep"></div>
+            <div class="card-footer">
+              <span class="pill">Card usuário</span>
+              <span class="date">25 / 09</span>
+            </div>
+          </div>
+        </article>
+        <!--CARD-->
+        <!--CARD-->
+        <article class="card achado">
+          <header class="card-top">
+              <h3>Fone de ouvido</h3>
+          </header>
+          <div class="card-body">
+            <p class="descricao">
+            Fone de ouvido genérico, modelo intra-auricular (de entrada no ouvido), com fio. Cor predominante preto de plástico e borracha de silicone nas ponteiras.
+            </p>
+            <div class="meta">
+              <div class="meta-item"><i class="fa-solid fa-user" style="color: #ffffff;"></i></span> Irmão de bota</div>
+              <div class="meta-item"><i class="fa-solid fa-location-dot" style="color: #ffffff;"></i> DS</div>
+            </div>
+            <div class="card-sep"></div>
+            <div class="card-footer">
+              <span class="pill">Card usuário</span>
+              <span class="date">25 / 09</span>
+            </div>
+          </div>
+        </article>
+        <!--CARD-->
+        <!--CARD-->
+        <article class="card achado">
+          <header class="card-top">
+              <h3>Fone de ouvido</h3>
+          </header>
+          <div class="card-body">
+            <p class="descricao">
+            Fone de ouvido genérico, modelo intra-auricular (de entrada no ouvido), com fio. Cor predominante preto de plástico e borracha de silicone nas ponteiras.
+            </p>
+            <div class="meta">
+              <div class="meta-item"><i class="fa-solid fa-user" style="color: #ffffff;"></i></span> Irmão de bota</div>
+              <div class="meta-item"><i class="fa-solid fa-location-dot" style="color: #ffffff;"></i> DS</div>
+            </div>
+            <div class="card-sep"></div>
+            <div class="card-footer">
+              <span class="pill">Card usuário</span>
+              <span class="date">25 / 09</span>
+            </div>
+          </div>
+        </article>
+        <!--CARD-->
       </div>
-
-      <div class="card">
-        <h3>Fone de ouvido</h3>
-        <p>Fone de ouvido bluetooth rosa. Tem adesivos colados atrás.</p>
-        <div class="card-info">
-          <span><i class="fas fa-user"></i> Carmem</span>
-          <span><i class="fas fa-map-marker-alt"></i> Refeitório</span>
-        </div>
-        <div class="card-footer">
-          <i class="fas fa-user-circle"></i> Card usuário - 25/09
-        </div>
-      </div>
-     <div class="card">
-        <h3>Fone de ouvido</h3>
-        <p>Fone de ouvido bluetooth rosa. Tem adesivos colados atrás.</p>
-        <div class="card-info">
-          <span><i class="fas fa-user"></i> Carmem</span>
-          <span><i class="fas fa-map-marker-alt"></i> Refeitório</span>
-        </div>
-        <div class="card-footer">
-          <i class="fas fa-user-circle"></i> Card usuário - 25/09
-        </div>
-      </div>
-     <div class="card">
-        <h3>Fone de ouvido</h3>
-        <p>Fone de ouvido bluetooth rosa. Tem adesivos colados atrás.</p>
-        <div class="card-info">
-          <span><i class="fas fa-user"></i> Carmem</span>
-          <span><i class="fas fa-map-marker-alt"></i> Refeitório</span>
-        </div>
-        <div class="card-footer">
-          <i class="fas fa-user-circle"></i> Card usuário - 25/09
-        </div>
-      </div>
-     <div class="card">
-        <h3>Fone de ouvido</h3>
-        <p>Fone de ouvido bluetooth rosa. Tem adesivos colados atrás.</p>
-        <div class="card-info">
-          <span><i class="fas fa-user"></i> Carmem</span>
-          <span><i class="fas fa-map-marker-alt"></i> Refeitório</span>
-        </div>
-        <div class="card-footer">
-          <i class="fas fa-user-circle"></i> Card usuário - 25/09
-        </div>
-      </div>
-     <div class="card">
-        <h3>Fone de ouvido</h3>
-        <p>Fone de ouvido bluetootAh rosa. Tem adesivos colados atrás.</p>
-        <div class="card-info">
-          <span><i class="fas fa-user"></i> Carmem</span>
-          <span><i class="fas fa-map-marker-alt"></i> Refeitório</span>
-        </div>
-        <div class="card-footer">
-          <i class="fas fa-user-circle"></i> Card usuário - 25/09
-        </div>
-      </div>
-     <div class="card">
-        <h3>Fone de ouvido</h3>
-        <p>Fone de ouvido bluetooth rosa. Tem adesivos colados atrás.</p>
-        <div class="card-info">
-          <span><i class="fas fa-user"></i> Carmem</span>
-          <span><i class="fas fa-map-marker-alt"></i> Refeitório</span>
-        </div>
-        <div class="card-footer">
-          <i class="fas fa-user-circle"></i> Card usuário - 25/09
-        </div>
-      </div>
-     <div class="card">
-        <h3>Fone de ouvido</h3>
-        <p>Fone de ouvido bluetooth rosa. Tem adesivos colados atrás.</p>
-        <div class="card-info">
-          <span><i class="fas fa-user"></i> Carmem</span>
-          <span><i class="fas fa-map-marker-alt"></i> Refeitório</span>
-        </div>
-        <div class="card-footer">
-          <i class="fas fa-user-circle"></i> Card usuário - 25/09
-        </div>
-      </div>
-    </section>
-
-
+      <!--CONTAINER CARD 2-->
+    </div>
+    <!--CONTAINER CARD-->
   </main>
+    <!--RODAPÉ-->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-left">
+        <img src="img/logoSenai.png" alt="Logo SENAI" class="footer-logo">
+      </div>
+
+      <div class="footer-social">
+        <a href="#"><i class="bi bi-facebook"></i></a>
+        <a href="#"><i class="bi bi-instagram"></i></a>
+        <a href="#"><i class="bi bi-twitter-x"></i></a>
+        <a href="#"><i class="bi bi-youtube"></i></a>
+        <a href="#"><i class="bi bi-linkedin"></i></a>
+        <a href="#"><i class="bi bi-tiktok"></i></a>
+      </div>
+    </div>
+
+    <hr class="footer-divider">
+
+    <div class="footer-bottom">
+      <p>Copyright ©2025 SENAI - Todos os direitos reservados</p>
+      <div class="footer-links">
+        <a href="#">Contato</a>
+        <span>•</span>
+        <a href="#">Termos de uso e Política de privacidade</a>
+      </div>
+    </div>
+  </footer>
+  <!--RODAPÉ-->
 
 </body>
 </html>
