@@ -503,3 +503,13 @@ body {
   text-decoration: underline;
 }
 /* RODAPÉ */
+
+.produtos-section .cards-container {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+.produtos-section .cards-container::-webkit-scrollbar {
+  display: none;
+}
