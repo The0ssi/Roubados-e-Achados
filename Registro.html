@@ -40,17 +40,35 @@
   <!-- FORMULÁRIO -->
   <section class="form-section">
   <div class="form-container">
-    <form class="lost-item-form">
+    <form id="formulario" class="lost-item-form">
       <div class="form-content">
         <div class="form-fields">
           <div class="form-row">
-            <input type="text" placeholder="Objeto / Item perdido" required>
+            <input type="text" placeholder="Nome do aluno" required>
+            <input type="text" placeholder="Matricula" required>
+          </div>
+          <div class="form-row">
+            <input type="text" class="item-input" placeholder="Objeto / Item achado" required>
             <input type="date" required>
           </div>
 
           <div class="form-row">
-            <input type="text" placeholder="Local última vez visto" required>
-            <input type="text" placeholder="Período última vez visto" required>
+            <select name="Local última vez visto">
+              <option value="nao">Local que foi encontrado</option>
+              <option value="sim">Refeitorio</option>
+              <option value="nao">Sala de informatica 1</option>
+              <option value="nao">Sala de informatica 2</option>
+              <option value="nao">Auditorio</option>
+              <option value="nao">Banheiro</option>
+              <option value="nao">Patio</option>
+              <option value="nao">Desconhecido</option>
+            </select>
+            <select name="Período última vez visto">
+              <option value="nao">Período que foi encontrado</option>
+              <option value="sim">Amanha</option>
+              <option value="nao">Tarde</option>
+              <option value="nao">Noite</option>
+            </select>
           </div>
 
           <div class="filters">
