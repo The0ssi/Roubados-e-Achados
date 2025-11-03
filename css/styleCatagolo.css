@@ -8,12 +8,12 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: #f4f1f1;
+  background-color: #f5f5f5;
 }
 
 /* HEADER */
 .header {
-  background-color: #f4f1f1;
+  background-color: #f5f5f5;
   padding: 10px 20px;
   display: flex;
   justify-content: space-between;
@@ -40,12 +40,37 @@ body {
   background-color: #003c90;
   color: #f5f5f5;
   padding: 60px 50px 160px;
-  height: 450px;
+  height: 300px;
   position: relative;
   overflow: hidden;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+}
+.hero h1 {
+  z-index: 10;
+  font-size: 70px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  line-height: 1.1;
+  color: #f5f5f5;
+  text-align: center;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.hero-text {
+  max-width: 380px;
+  z-index: 10;
+  margin-top: 10px;
+}
+.hero p {
+  font-size: 17px;
+  margin-bottom: 35px;
+  line-height: 1.5;
+  color: #f5f5f5;
+  max-width: 510px;
 }
 
 /* Imagens dos objetos caindo */
@@ -91,7 +116,7 @@ body {
 .hero h1 {
   font-size: 50px;
   font-weight: 700;
-  margin-bottom: 25px;
+  margin-bottom: 50px;
   line-height: 1.2;
   z-index: 10;
 }
@@ -100,7 +125,7 @@ body {
   font-size: 17px;
   margin-bottom: 35px;
   line-height: 1.5;
-  color: #dbe6ff;
+  color: #f5f5f5;
   max-width: 510px;
 }
 
@@ -110,7 +135,7 @@ body {
   right: 0; 
   width: 550px; 
   height: 90px; 
-  background: #f3f3f3; 
+  background: #f5f5f5; 
   border-radius: 60px 0 0 0; 
   display: flex; 
   flex-direction: column; 
@@ -144,18 +169,19 @@ body {
   font-weight: 700;
   margin-bottom: 20px; 
   line-height: 1.1;
-  color: #f4f1f1;
+  color:rgb(255, 255, 255);
   text-align: center; 
   position: absolute;
-  top: 40%;
-  left: 50%;
+  top: 30%;
+  left: 47%;
   transform: translateX(-50%);
 }
 
 
 /* Tabs (Botões de menu) */
+/* Tabs */
 .tabs {
-  background-color: #f4f1f1;
+  background-color:#f5f5f5;
   display: flex;
   justify-content: center;
   gap: 60px;
@@ -164,10 +190,10 @@ body {
   position: absolute;
   bottom: 0;
   right: 0;
-  width: 700px; 
+  width: 700px;
   height: 90px;
+  color:#333;
 }
-
 .tab-button {
   background: none;
   border: none;
@@ -177,8 +203,8 @@ body {
   padding: 10px 20px;
   cursor: pointer;
   position: relative;
+  transition: color 0.3s ease;
 }
-
 .tab-button.active::before {
   content: '';
   position: absolute;
@@ -189,11 +215,40 @@ body {
   background-color: #f25c05;
   border-radius: 2px;
 }
-
 .tab-button:hover {
   color: #f25c05;
-  transition: color 0.3s ease;
 }
+/* TABS  */
+.tab {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  transition: color 0.3s;
+}
+.tab:hover {
+  color: #ff6a00;
+}
+.line {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50%;
+  height: 2px;
+  background-color: #ff6a00;
+  transition: left 0.3s, width 0.3s;
+}
+#formulario {
+  padding: 20px;
+  border: 1px dashed #ddd;
+  display: none;
+}
+#formulario.achado,
+#formulario.perdido {
+  display: block;
+}
+/* TABS  */
 
 /* Remover a curva da parte inferior original */
 .bottom-curve {
@@ -208,7 +263,7 @@ body {
 .filtro-container {
   width: 250px;
   padding: 20px;
-  background-color: #f4f1f1;
+  background-color: #f5f5f5;
   font-family: Arial, sans-serif;
   font-size: 14px;
   color: #333;
@@ -273,7 +328,7 @@ body {
 .filtro-container {
   width: 250px;
   padding: 20px;
-  background-color: #f4f1f1;
+  background-color: #f5f5f5;
   font-family: Arial, sans-serif;
   font-size: 14px;
   color: #333;
@@ -293,7 +348,7 @@ body {
   width: 98%;
   border-radius: 15px;
   overflow: hidden;
-  background-color: #f4f1f1;
+  background-color: #f5f5f5;
   display: flex;
   flex-direction: column;
 }
@@ -354,7 +409,7 @@ body {
 .card-description {
   padding: 20px;
   color: #333;
-  background-color: #f4f1f1;
+  background-color: #f5f5f5;
 }
 
 
