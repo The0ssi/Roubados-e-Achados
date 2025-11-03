@@ -40,7 +40,7 @@ body {
   background-color: #003c90;
   color: #f5f5f5;
   padding: 60px 50px 160px;
-  height: 450px;
+  height: 350px;
   position: relative;
   overflow: hidden;
   display: flex;
@@ -56,8 +56,8 @@ body {
   height: 500px;
   width: 650px;
   z-index: 0;
-  opacity: 0.4; 
-  filter: brightness(0.7); 
+  opacity: 0.4; /* Efeito de apagamento */
+  filter: brightness(0.7); /* Escurecimento suave */
 }
 .man-img2 {
   position: absolute;
@@ -66,8 +66,8 @@ body {
   height: 500px;
   width: 640px;
   z-index: 0;
-  opacity: 0.4; 
-  filter: brightness(0.7); 
+  opacity: 0.4; /* Efeito de apagamento */
+  filter: brightness(0.7); /* Escurecimento suave */
 }
 .man-img3{
   position: absolute;
@@ -76,8 +76,8 @@ body {
   height: 450px;
   width: 607px;
   z-index: 0;
-  opacity: 0.4; 
-  filter: brightness(0.7); 
+  opacity: 0.4; /* Efeito de apagamento */
+  filter: brightness(0.7); /* Escurecimento suave */
 }
 
 
@@ -91,7 +91,7 @@ body {
 .hero h1 {
   font-size: 50px;
   font-weight: 700;
-  margin-bottom: 25px;
+  margin-bottom: 50px;
   line-height: 1.2;
   z-index: 10;
 }
@@ -140,18 +140,40 @@ body {
 
 /* Título */
 .hero h1 {
-  font-size: 70px;  
+  font-size: 70px;  /* Tamanho ajustado do título */
   font-weight: 700;
-  margin-bottom: 20px; 
+  margin-bottom: 20px; /* Ajustado para o espaçamento correto */
   line-height: 1.1;
   color: #f4f1f1;
-  text-align: center; 
+  text-align: center; /* Centralizado no meio da tela */
   position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translateX(-50%);
+  top: 30%;
+  left: 47%;
+  transform: translateX(-50%); /* Centraliza horizontalmente */
 }
 
+/* Ajuste nas setas */
+.seta {
+  width: 120px;
+  position: absolute;
+  z-index: 1;
+}
+.seta-superior1 {
+  bottom: 40px;
+  left: -20;
+}
+.seta-superior2 {
+  bottom: 40px;
+  left: 180px;
+}
+.seta-inferior1 {
+  top: 30px;
+  right: 50px;
+}
+.seta-inferior2 {
+  top: 30px;
+  right: 180px; 
+}
 
 /* Tabs (Botões de menu) */
 .tabs {
@@ -164,7 +186,7 @@ body {
   position: absolute;
   bottom: 0;
   right: 0;
-  width: 700px; 
+  width: 700px; /* Ajustado para o tamanho dos botões */
   height: 90px;
 }
 
@@ -277,7 +299,7 @@ body {
   font-family: Arial, sans-serif;
   font-size: 14px;
   color: #333;
-  flex-shrink: 0; 
+  flex-shrink: 0; /* Evita que a barra de filtro encolha */
 }
 .card-container {
   display: flex;
@@ -330,7 +352,7 @@ body {
 .card-image img {
   width: 100%;
   height: 100%;
-  object-fit: cover; 
+  object-fit: cover; /* preenche e recorta sem distorcer */
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
 }
@@ -381,8 +403,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 10px; 
-    gap: 8px; 
+    margin-top: 10px; /* centraliza verticalmente */
+    gap: 8px; /* espaço entre botões */
 }
 
 /* Botões padrão */
@@ -448,8 +470,8 @@ body {
   display: flex;
   justify-content: space-between; /* manda um pra cada canto */
   align-items: center;
-  width: 100%;
-  padding: 0 40px;
+  width: 100%; /* ocupa 100% da tela */
+  padding: 0 40px; /* espaçamento lateral */
   font-size: 13px;
   box-sizing: border-box;
 }
@@ -492,10 +514,10 @@ body {
 /* Parte inferior – ocupa toda a largura */
 .footer-bottom {
   display: flex;
-  justify-content: space-between; 
+  justify-content: space-between; /* manda um pra cada canto */
   align-items: center;
-  width: 100%; 
-  padding: 0 40px; 
+  width: 100%; /* ocupa 100% da tela */
+  padding: 0 40px; /* espaçamento lateral */
   font-size: 13px;
   box-sizing: border-box;
 }
