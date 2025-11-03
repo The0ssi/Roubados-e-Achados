@@ -36,49 +36,166 @@
         </div>
     </section>
     <!--HERO-->
-
+    
     <!-- FORMULÁRIO -->
-<!-- FORMULÁRIO DE REGISTRO -->
-<section class="form-section">
-  <div class="form-container">
-    <form action="#" method="post" enctype="multipart/form-data" class="lost-item-form">
-      <div class="form-content">
-        <!-- Formulário de dados do item (lado esquerdo) -->
-        <div class="form-fields">
-          <div class="form-row">
-            <input type="text" name="item" placeholder="Objeto / Item perdido" required>
-            <input type="date" name="dataPerdido" placeholder="Data que foi perdido" required>
+    <section class="form-section">
+      <div class="form-container">
+        <form class="lost-item-form">
+          <div class="form-content">
+            <div class="form-fields">
+              <div class="form-row">
+                <input type="text" placeholder="Objeto / Item perdido" required>
+                <input type="date" required>
+              </div>
+
+              <div class="form-row">
+                <input type="text" placeholder="Local última vez visto" required>
+                <input type="text" placeholder="Período última vez visto" required>
+              </div>
+
+              <div class="filters">
+                <label><input type="checkbox"> Eletrônicos</label>
+                <label><input type="checkbox"> Vestimentas</label>
+                <label><input type="checkbox"> Acessórios</label>
+                <label><input type="checkbox"> Chaves</label>
+                <label><input type="checkbox"> Documentos</label>
+                <label><input type="checkbox"> Outros</label>
+              </div>
+
+              <textarea placeholder="Descrição do item"></textarea>
+            </div>
+
+            <div class="button-container">
+              <button type="submit" class="btn-registrar">Registra item</button>
+            </div>
           </div>
+        </form>
 
-          <div class="form-row">
-            <input type="text" name="local" placeholder="Local última vez visto" required>
-            <input type="text" name="periodo" placeholder="Período última vez visto" required>
-          </div>
-
-          <textarea name="descricao" rows="5" placeholder="Descrição do item" required></textarea>
-        </div>
-      </div>
-
-      <!-- Botão centralizado abaixo do formulário -->
-      <div class="button-container">
-        <button type="submit" class="btn-registrar">Registra item</button>
-      </div>
-    </form>
-
-    <!-- Área de upload de imagem (canto direito) -->
-    <div class="image-upload">
-      <div class="upload-box" id="uploadBox">
+          <div class="image-upload">
+      <div class="upload-box">
         <i class="fa-solid fa-image"></i>
         <p>Escolha ou arraste uma imagem</p>
-        <label for="fileInput" class="choose-btn">Escolher</label>
-        <input type="file" id="fileInput" name="imagem" accept="image/*" hidden>
+        <label class="choose-btn" for="fileInput">Escolher</label>
+        <input id="fileInput" type="file" hidden>
       </div>
     </div>
-  </div>
-</section>
-<!-- FIM DO FORMULÁRIO -->
-
+    </section>
     <!-- FORMULÁRIO -->
+
+    <!-- SUGESTÕES DE ITENS -->
+    <section class="suggestion-section">
+      <h2>Talvez seu item seja um desses...</h2>
+      <div class="cards-wrapper">
+        <div class="cards-container">
+          <!--CARD-->
+        <article class="card achado">
+          <header class="card-top">
+              <h3>Fone de ouvido</h3>
+          </header>
+          <div class="card-body">
+            <p class="descricao">
+            Fone de ouvido genérico, modelo intra-auricular (de entrada no ouvido), com fio. Cor predominante preto de plástico e borracha de silicone nas ponteiras.
+            </p>
+            <div class="meta">
+              <div class="meta-item"><i class="fa-solid fa-user" style="color: #ffffff;"></i></span> Irmão de bota</div>
+              <div class="meta-item"><i class="fa-solid fa-location-dot" style="color: #ffffff;"></i> DS</div>
+            </div>
+            <div class="card-sep"></div>
+            <div class="card-footer">
+              <span class="pill">Card usuário</span>
+              <span class="date">25 / 09</span>
+            </div>
+          </div>
+        </article>
+        <!--CARD-->
+        <!--CARD-->
+        <article class="card achado">
+          <header class="card-top">
+              <h3>Fone de ouvido</h3>
+          </header>
+          <div class="card-body">
+            <p class="descricao">
+            Fone de ouvido genérico, modelo intra-auricular (de entrada no ouvido), com fio. Cor predominante preto de plástico e borracha de silicone nas ponteiras.
+            </p>
+            <div class="meta">
+              <div class="meta-item"><i class="fa-solid fa-user" style="color: #ffffff;"></i></span> Irmão de bota</div>
+              <div class="meta-item"><i class="fa-solid fa-location-dot" style="color: #ffffff;"></i> DS</div>
+            </div>
+            <div class="card-sep"></div>
+            <div class="card-footer">
+              <span class="pill">Card usuário</span>
+              <span class="date">25 / 09</span>
+            </div>
+          </div>
+        </article>
+        <!--CARD-->
+        <!--CARD-->
+        <article class="card achado">
+          <header class="card-top">
+              <h3>Fone de ouvido</h3>
+          </header>
+          <div class="card-body">
+            <p class="descricao">
+            Fone de ouvido genérico, modelo intra-auricular (de entrada no ouvido), com fio. Cor predominante preto de plástico e borracha de silicone nas ponteiras.
+            </p>
+            <div class="meta">
+              <div class="meta-item"><i class="fa-solid fa-user" style="color: #ffffff;"></i></span> Irmão de bota</div>
+              <div class="meta-item"><i class="fa-solid fa-location-dot" style="color: #ffffff;"></i> DS</div>
+            </div>
+            <div class="card-sep"></div>
+            <div class="card-footer">
+              <span class="pill">Card usuário</span>
+              <span class="date">25 / 09</span>
+            </div>
+          </div>
+        </article>
+        <!--CARD-->
+        <!--CARD-->
+        <article class="card achado">
+          <header class="card-top">
+              <h3>Fone de ouvido</h3>
+          </header>
+          <div class="card-body">
+            <p class="descricao">
+            Fone de ouvido genérico, modelo intra-auricular (de entrada no ouvido), com fio. Cor predominante preto de plástico e borracha de silicone nas ponteiras.
+            </p>
+            <div class="meta">
+              <div class="meta-item"><i class="fa-solid fa-user" style="color: #ffffff;"></i></span> Irmão de bota</div>
+              <div class="meta-item"><i class="fa-solid fa-location-dot" style="color: #ffffff;"></i> DS</div>
+            </div>
+            <div class="card-sep"></div>
+            <div class="card-footer">
+              <span class="pill">Card usuário</span>
+              <span class="date">25 / 09</span>
+            </div>
+          </div>
+        </article>
+        <!--CARD-->
+        <!--CARD-->
+        <article class="card achado">
+          <header class="card-top">
+              <h3>Fone de ouvido</h3>
+          </header>
+          <div class="card-body">
+            <p class="descricao">
+            Fone de ouvido genérico, modelo intra-auricular (de entrada no ouvido), com fio. Cor predominante preto de plástico e borracha de silicone nas ponteiras.
+            </p>
+            <div class="meta">
+              <div class="meta-item"><i class="fa-solid fa-user" style="color: #ffffff;"></i></span> Irmão de bota</div>
+              <div class="meta-item"><i class="fa-solid fa-location-dot" style="color: #ffffff;"></i> DS</div>
+            </div>
+            <div class="card-sep"></div>
+            <div class="card-footer">
+              <span class="pill">Card usuário</span>
+              <span class="date">25 / 09</span>
+            </div>
+          </div>
+        </article>
+        <!--CARD-->
+        </div>
+      </div>
+    </section>
+    <!-- FIM SUGESTÕES DE ITENS -->
 
     <!--RODAPÉ-->
     <footer class="footer">
