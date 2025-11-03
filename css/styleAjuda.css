@@ -14,6 +14,80 @@ body {
   position: relative;
   z-index: 100;
 }
+.hero {
+  background-color: #003c90;
+  color: #f5f5f5;
+  padding: 60px 50px 160px;
+  height: 400px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+/* Imagens dos objetos caindo */
+.man-img1 {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 500px;
+  width: 650px;
+  z-index: 0;
+  opacity: 0.4; /* Efeito de apagamento */
+  filter: brightness(0.7); /* Escurecimento suave */
+}
+.man-img2 {
+  position: absolute;
+  right: 725px;
+  top: 0px;
+  height: 500px;
+  width: 640px;
+  z-index: 0;
+  opacity: 0.4; /* Efeito de apagamento */
+  filter: brightness(0.7); /* Escurecimento suave */
+}
+.man-img3{
+  position: absolute;
+  left: -70px;
+  top: 0;
+  height: 450px;
+  width: 607px;
+  z-index: 0;
+  opacity: 0.4; /* Efeito de apagamento */
+  filter: brightness(0.7); /* Escurecimento suave */
+}
+
+
+/* Hero-text, para garantir que o conteúdo de texto fique por cima das imagens */
+.hero-text {
+  max-width: 380px;
+  z-index: 10;
+  margin-top: 10px;
+}
+
+.hero p {
+  font-size: 17px;
+  margin-bottom: 35px;
+  line-height: 1.5;
+  color: #dbe6ff;
+  max-width: 510px;
+}
+
+/* Título */
+.hero h1 {
+  font-size: 70px;  /* Tamanho ajustado do título */
+  font-weight: 700;
+  margin-bottom: 20px; /* Ajustado para o espaçamento correto */
+  line-height: 1.1;
+  color: #f4f1f1;
+  text-align: center; /* Centralizado no meio da tela */
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translateX(-50%); /* Centraliza horizontalmente */
+  z-index:10;
+}
 
 .logo {
   height: 30px;
@@ -272,4 +346,5 @@ body {
 .footer-links a:hover {
   text-decoration: underline;
 }
+
 
