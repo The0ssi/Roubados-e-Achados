@@ -207,10 +207,11 @@ body {
   display: flex;
   gap: 20px;
 }
-.form-row input {
+.form-row input, .form-row select {
   flex: 1;
 }
 .lost-item-form input,
+.lost-item-form select,
 .lost-item-form textarea {
   background-color: #b8c3e9;
   border: none;
@@ -469,15 +470,7 @@ body {
   background-color: #ff6a00;
   transition: left 0.3s, width 0.3s;
 }
-#formulario {
-  padding: 20px;
-  border: 1px dashed #ddd;
-  display: none;
-}
-#formulario.achado,
-#formulario.perdido {
-  display: block;
-}
+
 /* TABS  */
 
 
