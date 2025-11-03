@@ -1,191 +1,211 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Item achado</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
-  <script src="https://accounts.google.com/gsi/client" async defer></script>
-  <link rel="stylesheet" href="css/stylep.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ajuda - Itens Perdidos</title>
+    <link rel="stylesheet" href="css/styleAjuda.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <script
+      src="https://kit.fontawesome.com/2a37a60dfb.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
 
-  <!--HEADER-->
-  <header class="header">
-    <img src="img/logoSenai.png" alt="Logo SENAI" class="logo">
-    <div class="header-icons">
-      <i class="fa-solid fa-house icons" style="color: #d65417;"></i>
-      <i class="fa-solid fa-bell icons" style="color: #d65417;"></i>
-      <img src="img/user.png" alt="foto de perfil" class="user">
-      <span class="user-name">Usuário Da Silva</span>
+  <!-- Cabeçalho, contendo logo do senai, img do user e nome do usuario. -->
+
+  <body>
+    <header class="header">
+      <img src="img/logoSenai.png" alt="Logo SENAI" class="logo" />
+      <div class="header-icons">
+        <i class="fa-solid fa-house icons" style="color: #d65417"></i>
+        <i class="fa-solid fa-bell icons" style="color: #d65417"></i>
+        <img src="img/user.png" alt="foto de perfil" class="user" />
+        <span class="user-name">Usuário Da Silva</span>
+      </div>
+    </header>
+
+    <!-- Seção principal de "Ajuda" da página. -->
+
+
+  <section class="hero">
+    <div class="hero-text">
+        <h1>Itens Achados</h1>
+        <img src="img/objetos caido.png" alt="Objetos caindo" class="man-img1">
+        <img src="img/objetos caido.png" alt="Objetos caindo" class="man-img2">
+        <img src="img/objetos caido.png" alt="Objetos caindo" class="man-img3">
+        <div class="tabs">
+        </div>
     </div>
-  </header>
-  <!--HEADER-->
+</section>
 
-  <!-- Conteúdo principal -->
-  <main class="container">
+    <!-- Intro do nosso site, para que ele serve. -->
 
-    <!-- Bloco de detalhes -->
-    <section class="detalhes">
-      <div class="texto">
-        <h1>Fone de Ouvido</h1>
+    <main class="container">
+      <section class="intro">
+        <h2>Encontre seu item com facilidade</h2>
         <p>
-          Os fones de ouvido auriculares, popularmente chamados de earbuds, são periféricos de áudio que se encaixam na concha externa da orelha, sem vedar completamente o canal auditivo.
-          Oferecem menor isolamento acústico, além de serem fabricados com materiais mais leves.
-          Os fones intra-auriculares, ou in-ear, são projetados para serem encaixados diretamente dentro do canal auditivo, criando um isolamento do som ambiente.
-          Eles servem desde o uso diário para ouvir música até como monitores de áudio profissionais para músicos no palco.
+          Nosso sistema de Achados e Perdidos foi cuidadosamente desenvolvido
+          para tornar a busca pelos seus objetos muito mais simples, rápida e
+          eficiente. Com uma interface intuitiva, você pode registrar itens
+          encontrados ou perdidos em poucos cliques, acompanhando todo o
+          processo em tempo real. Nosso objetivo é oferecer uma experiência
+          segura, organizada e transparente, garantindo que você recupere seus
+          pertences com o mínimo de esforço. Confira abaixo como funciona nosso
+          serviço e tire suas dúvidas mais comuns para aproveitar ao máximo
+          nossa plataforma.
         </p>
+      </section>
 
-        <div class="info">
-          <div>
-            <h4>Último local</h4>
-            <p><i class="fas fa-map-marker-alt"></i> Refeitório</p>
+      <!-- Seção de cards, o que da para fazer no site. -->
+      <section class="cards">
+        <div class="card">Pesquise pelo nome ou descrição do item</div>
+        <div class="card">Veja os itens mais recentes cadastrados</div>
+        <div class="card">Registre um item perdido no nosso site</div>
+        <div class="card">Ajude a encontrar objetos desaparecidos</div>
+      </section>
+
+      <!-- Seção da imagem do Sherlock e Watson. -->
+
+      <section class="box-grande">
+        <img
+          src="img/Gemini_Generated_Image_20yvae20yvae20yv.png"
+          alt="Imagem do sistema de achados e perdidos"
+        />
+      </section>
+
+      <!-- Parte de perguntas frequentes (FAQ) do site.  -->
+
+      <section class="faq mt-5">
+        <h2 class="titulo-faq">Perguntas Frequentes</h2>
+
+        <div class="accordion" id="faqAccordion">
+
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="faq1">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapse1"
+              >
+                Como posso procurar por um item perdido no site?
+              </button>
+            </h2>
+            <div
+              id="collapse1"
+              class="accordion-collapse collapse"
+              data-bs-parent="#faqAccordion"
+            >
+              <div class="accordion-body">
+                Nosso sistema foi desenvolvido para ajudar você a encontrar
+                objetos rapidamente. Basta usar a barra de busca, digitando o
+                nome ou descrição do item. Você pode filtrar por categoria, data
+                ou localização. A lista é atualizada automaticamente.
+              </div>
+            </div>
           </div>
-          <div>
-            <h4>Data</h4>
-            <p><i class="fas fa-calendar-alt"></i> 18/9/2025</p>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="faq2">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapse2"
+              >
+                O que fazer se não encontrar meu item na lista?
+              </button>
+            </h2>
+            <div
+              id="collapse2"
+              class="accordion-collapse collapse"
+              data-bs-parent="#faqAccordion"
+            >
+              <div class="accordion-body">
+                Caso não encontre seu item, volte a verificar mais tarde — o
+                banco de dados é atualizado constantemente. Você também pode
+                registrar um novo item perdido com detalhes como cor, marca e
+                local.
+              </div>
+            </div>
           </div>
-          <div>
-            <h4>Período</h4>
-            <p><i class="fas fa-clock"></i> Desconhecido</p>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="faq3">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapse3"
+              >
+                Posso registrar que perdi um item?
+              </button>
+            </h2>
+            <div
+              id="collapse3"
+              class="accordion-collapse collapse"
+              data-bs-parent="#faqAccordion"
+            >
+              <div class="accordion-body">
+                Sim! Vá até a seção “Registrar Item Perdido”, preencha o
+                formulário e anexe uma foto. Seu item ficará disponível para que
+                outros usuários possam ajudar a encontrá-lo.
+              </div>
+            </div>
           </div>
-          <div>
-            <h4>Pessoa</h4>
-            <p><i class="fas fa-user"></i> ygona69@aluno.senai.br</p>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="faq4">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapse4"
+              >
+                Existem itens que não podem ser cadastrados por alunos?
+              </button>
+            </h2>
+            <div
+              id="collapse4"
+              class="accordion-collapse collapse"
+              data-bs-parent="#faqAccordion"
+            >
+              <div class="accordion-body">
+                Sim, documentos pessoais (RG, CPF, passaporte) e itens ilegais
+                devem ser entregues à coordenação (Nancy). Isso garante
+                segurança e privacidade para todos os usuários.
+              </div>
+            </div>
           </div>
         </div>
+      </section>
+
+      <!-- Seção de limitação do site. -->
+
+      <div class="secao limitacoes">
+        <h2>Limitações</h2>
+        <p>
+          Alguns itens não podem ser aceitos no sistema por questões de
+          segurança.
+        </p>
       </div>
 
-     <div class="item-imagem">
-        <div class="image-placeholder">
-          <i class="fas fa-image"></i>
-        </div>
-      </div>
-    </section>
+      <!-- Seção de dicas do site. -->
 
-    <!--CONTAINER CARD-->
-    <div class="cards-wrapper">
-      <!--SETAS-->
-      <div class="navigation">
-        <i class="fa-solid fa-chevron-left fa-2xl" style="color: #d65417;" id="seta-left"></i>
-        <i class="fa-solid fa-chevron-right fa-2xl" style="color: #d65417;" id="seta-right"></i>
+      <div class="secao dicas">
+        <h2>Dicas</h2>
+        <p>
+          Use palavras-chave específicas e verifique a lista de novos itens
+          regularmente.
+        </p>
       </div>
-
-      <!--CONTAINER CARD 2-->
-      <div class="cards-container">
-        <!--CARD-->
-        <article class="card achado">
-          <header class="card-top">
-              <h3>Fone de ouvido</h3>
-          </header>
-          <div class="card-body">
-            <p class="descricao">
-            Fone de ouvido genérico, modelo intra-auricular (de entrada no ouvido), com fio. Cor predominante preto de plástico e borracha de silicone nas ponteiras.
-            </p>
-            <div class="meta">
-              <div class="meta-item"><i class="fa-solid fa-user" style="color: #ffffff;"></i></span> Irmão de bota</div>
-              <div class="meta-item"><i class="fa-solid fa-location-dot" style="color: #ffffff;"></i> DS</div>
-            </div>
-            <div class="card-sep"></div>
-            <div class="card-footer">
-              <span class="pill">Card usuário</span>
-              <span class="date">25 / 09</span>
-            </div>
-          </div>
-        </article>
-        <!--CARD-->
-        <!--CARD-->
-        <article class="card achado">
-          <header class="card-top">
-              <h3>Fone de ouvido</h3>
-          </header>
-          <div class="card-body">
-            <p class="descricao">
-            Fone de ouvido genérico, modelo intra-auricular (de entrada no ouvido), com fio. Cor predominante preto de plástico e borracha de silicone nas ponteiras.
-            </p>
-            <div class="meta">
-              <div class="meta-item"><i class="fa-solid fa-user" style="color: #ffffff;"></i></span> Irmão de bota</div>
-              <div class="meta-item"><i class="fa-solid fa-location-dot" style="color: #ffffff;"></i> DS</div>
-            </div>
-            <div class="card-sep"></div>
-            <div class="card-footer">
-              <span class="pill">Card usuário</span>
-              <span class="date">25 / 09</span>
-            </div>
-          </div>
-        </article>
-        <!--CARD-->
-        <!--CARD-->
-        <article class="card achado">
-          <header class="card-top">
-              <h3>Fone de ouvido</h3>
-          </header>
-          <div class="card-body">
-            <p class="descricao">
-            Fone de ouvido genérico, modelo intra-auricular (de entrada no ouvido), com fio. Cor predominante preto de plástico e borracha de silicone nas ponteiras.
-            </p>
-            <div class="meta">
-              <div class="meta-item"><i class="fa-solid fa-user" style="color: #ffffff;"></i></span> Irmão de bota</div>
-              <div class="meta-item"><i class="fa-solid fa-location-dot" style="color: #ffffff;"></i> DS</div>
-            </div>
-            <div class="card-sep"></div>
-            <div class="card-footer">
-              <span class="pill">Card usuário</span>
-              <span class="date">25 / 09</span>
-            </div>
-          </div>
-        </article>
-        <!--CARD-->
-        <!--CARD-->
-        <article class="card achado">
-          <header class="card-top">
-              <h3>Fone de ouvido</h3>
-          </header>
-          <div class="card-body">
-            <p class="descricao">
-            Fone de ouvido genérico, modelo intra-auricular (de entrada no ouvido), com fio. Cor predominante preto de plástico e borracha de silicone nas ponteiras.
-            </p>
-            <div class="meta">
-              <div class="meta-item"><i class="fa-solid fa-user" style="color: #ffffff;"></i></span> Irmão de bota</div>
-              <div class="meta-item"><i class="fa-solid fa-location-dot" style="color: #ffffff;"></i> DS</div>
-            </div>
-            <div class="card-sep"></div>
-            <div class="card-footer">
-              <span class="pill">Card usuário</span>
-              <span class="date">25 / 09</span>
-            </div>
-          </div>
-        </article>
-        <!--CARD-->
-        <!--CARD-->
-        <article class="card achado">
-          <header class="card-top">
-              <h3>Fone de ouvido</h3>
-          </header>
-          <div class="card-body">
-            <p class="descricao">
-            Fone de ouvido genérico, modelo intra-auricular (de entrada no ouvido), com fio. Cor predominante preto de plástico e borracha de silicone nas ponteiras.
-            </p>
-            <div class="meta">
-              <div class="meta-item"><i class="fa-solid fa-user" style="color: #ffffff;"></i></span> Irmão de bota</div>
-              <div class="meta-item"><i class="fa-solid fa-location-dot" style="color: #ffffff;"></i> DS</div>
-            </div>
-            <div class="card-sep"></div>
-            <div class="card-footer">
-              <span class="pill">Card usuário</span>
-              <span class="date">25 / 09</span>
-            </div>
-          </div>
-        </article>
-        <!--CARD-->
-      </div>
-      <!--CONTAINER CARD 2-->
-    </div>
-    <!--CONTAINER CARD-->
-  </main>
-    <!--RODAPÉ-->
-  <footer class="footer">
+    </main>
+     <footer class="footer">
     <div class="footer-container">
       <div class="footer-left">
         <img src="img/logoSenai.png" alt="Logo SENAI" class="footer-logo">
@@ -212,7 +232,10 @@
       </div>
     </div>
   </footer>
-  <!--RODAPÉ-->
 
-</body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    
+  </body>
 </html>
+
