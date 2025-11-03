@@ -1,349 +1,241 @@
-body {
-  margin: 0;
-  font-family: "Arial", sans-serif;
-  background-color: #fffaf5;
-  color: #2e304bff;
-}
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ajuda - Itens Perdidos</title>
+    <link rel="stylesheet" href="css/styleAjuda.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <script
+      src="https://kit.fontawesome.com/2a37a60dfb.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
 
-.header {
-  background-color: #fff;
-  padding: 10px 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: relative;
-  z-index: 100;
-}
-.hero {
-  background-color: #003c90;
-  color: #f5f5f5;
-  padding: 60px 50px 160px;
-  height: 400px;
-  position: relative;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-}
+  <!-- Cabeçalho, contendo logo do senai, img do user e nome do usuario. -->
 
-/* Imagens dos objetos caindo */
-.man-img1 {
-  position: absolute;
-  right: 0;
-  top: 0;
-  height: 500px;
-  width: 650px;
-  z-index: 0;
-  opacity: 0.4; /* Efeito de apagamento */
-  filter: brightness(0.7); /* Escurecimento suave */
-}
-.man-img2 {
-  position: absolute;
-  right: 725px;
-  top: 0px;
-  height: 500px;
-  width: 640px;
-  z-index: 0;
-  opacity: 0.4; /* Efeito de apagamento */
-  filter: brightness(0.7); /* Escurecimento suave */
-}
-.man-img3{
-  position: absolute;
-  left: -70px;
-  top: 0;
-  height: 450px;
-  width: 607px;
-  z-index: 0;
-  opacity: 0.4; /* Efeito de apagamento */
-  filter: brightness(0.7); /* Escurecimento suave */
-}
+  <body>
+    <header class="header">
+      <img src="img/logoSenai.png" alt="Logo SENAI" class="logo" />
+      <div class="header-icons">
+        <i class="fa-solid fa-house icons" style="color: #d65417"></i>
+        <i class="fa-solid fa-bell icons" style="color: #d65417"></i>
+        <img src="img/user.png" alt="foto de perfil" class="user" />
+        <span class="user-name">Usuário Da Silva</span>
+      </div>
+    </header>
+
+    <!-- Seção principal de "Ajuda" da página. -->
 
 
-/* Hero-text, para garantir que o conteúdo de texto fique por cima das imagens */
-.hero-text {
-  max-width: 380px;
-  z-index: 10;
-  margin-top: 10px;
-}
+  <section class="hero">
+    <div class="hero-text">
+        <h1>Itens Achados</h1>
+        <img src="img/objetos caido.png" alt="Objetos caindo" class="man-img1">
+        <img src="img/objetos caido.png" alt="Objetos caindo" class="man-img2">
+        <img src="img/objetos caido.png" alt="Objetos caindo" class="man-img3">
+        <div class="tabs">
+        </div>
+    </div>
+</section>
 
-.hero p {
-  font-size: 17px;
-  margin-bottom: 35px;
-  line-height: 1.5;
-  color: #dbe6ff;
-  max-width: 510px;
-}
+    <!-- Intro do nosso site, para que ele serve. -->
 
-/* Título */
-.hero h1 {
-  font-size: 70px;  /* Tamanho ajustado do título */
-  font-weight: 700;
-  margin-bottom: 20px; /* Ajustado para o espaçamento correto */
-  line-height: 1.1;
-  color: #f4f1f1;
-  text-align: center; /* Centralizado no meio da tela */
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translateX(-50%); /* Centraliza horizontalmente */
-  z-index:10;
-}
+    <main class="container">
+      <section class="intro">
+        <h2>Encontre seu item com facilidade</h2>
+        <p>
+          Nosso sistema de Achados e Perdidos foi cuidadosamente desenvolvido
+          para tornar a busca pelos seus objetos muito mais simples, rápida e
+          eficiente. Com uma interface intuitiva, você pode registrar itens
+          encontrados ou perdidos em poucos cliques, acompanhando todo o
+          processo em tempo real. Nosso objetivo é oferecer uma experiência
+          segura, organizada e transparente, garantindo que você recupere seus
+          pertences com o mínimo de esforço. Confira abaixo como funciona nosso
+          serviço e tire suas dúvidas mais comuns para aproveitar ao máximo
+          nossa plataforma.
+        </p>
+      </section>
 
-.logo {
-  height: 30px;
-}
+      <!-- Seção de cards, o que da para fazer no site. -->
+      <section class="cards">
+        <div class="card">Pesquise pelo nome ou descrição do item</div>
+        <div class="card">Veja os itens mais recentes cadastrados</div>
+        <div class="card">Registre um item perdido no nosso site</div>
+        <div class="card">Ajude a encontrar objetos desaparecidos</div>
+      </section>
 
-.header-icons {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-}
+      <!-- Seção da imagem do Sherlock e Watson. -->
 
-.user {
-  height: 30px;
-  border-radius: 50%;
-}
+      <section class="box-grande">
+        <img
+          src="img/Gemini_Generated_Image_20yvae20yvae20yv.png"
+          alt="Imagem do sistema de achados e perdidos"
+        />
+      </section>
 
-.user-name {
-  font-size: 14px;
-}
+      <!-- Parte de perguntas frequentes (FAQ) do site.  -->
 
-.hero {
-  background-color: #003c90;
-  color: white;
-  padding: 120px 50px 200px;
-  height: 450px;
-  position: relative;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+      <section class="faq mt-5">
+        <h2 class="titulo-faq">Perguntas Frequentes</h2>
 
-.ajuda-centralizada {
-  text-align: center;
-  color: #ffffffff;
-  z-index: 10;
-}
+        <div class="accordion" id="faqAccordion">
 
-.ajuda-centralizada h1 {
-  font-size: 130px;
-  font-weight: bold;
-  margin: 0;
-  position: relative;
-}
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="faq1">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapse1"
+              >
+                Como posso procurar por um item perdido no site?
+              </button>
+            </h2>
+            <div
+              id="collapse1"
+              class="accordion-collapse collapse"
+              data-bs-parent="#faqAccordion"
+            >
+              <div class="accordion-body">
+                Nosso sistema foi desenvolvido para ajudar você a encontrar
+                objetos rapidamente. Basta usar a barra de busca, digitando o
+                nome ou descrição do item. Você pode filtrar por categoria, data
+                ou localização. A lista é atualizada automaticamente.
+              </div>
+            </div>
+          </div>
 
-.onda-img {
-  position: absolute;
-  top: 90px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 350px;
-  margin-top: 30px;
-}
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="faq2">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapse2"
+              >
+                O que fazer se não encontrar meu item na lista?
+              </button>
+            </h2>
+            <div
+              id="collapse2"
+              class="accordion-collapse collapse"
+              data-bs-parent="#faqAccordion"
+            >
+              <div class="accordion-body">
+                Caso não encontre seu item, volte a verificar mais tarde — o
+                banco de dados é atualizado constantemente. Você também pode
+                registrar um novo item perdido com detalhes como cor, marca e
+                local.
+              </div>
+            </div>
+          </div>
 
-.sherlock-img {
-  width: 190px;
-  position: absolute;
-  top: 40px;
-  left: 30px;
-}
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="faq3">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapse3"
+              >
+                Posso registrar que perdi um item?
+              </button>
+            </h2>
+            <div
+              id="collapse3"
+              class="accordion-collapse collapse"
+              data-bs-parent="#faqAccordion"
+            >
+              <div class="accordion-body">
+                Sim! Vá até a seção “Registrar Item Perdido”, preencha o
+                formulário e anexe uma foto. Seu item ficará disponível para que
+                outros usuários possam ajudar a encontrá-lo.
+              </div>
+            </div>
+          </div>
 
-.watson-img {
-  width: 260px;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  transform: translateY(35px);
-}
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="faq4">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapse4"
+              >
+                Existem itens que não podem ser cadastrados por alunos?
+              </button>
+            </h2>
+            <div
+              id="collapse4"
+              class="accordion-collapse collapse"
+              data-bs-parent="#faqAccordion"
+            >
+              <div class="accordion-body">
+                Sim, documentos pessoais (RG, CPF, passaporte) e itens ilegais
+                devem ser entregues à coordenação (Nancy). Isso garante
+                segurança e privacidade para todos os usuários.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-.intro {
-  text-align: center;
-  padding: 40px 20px;
-}
+      <!-- Seção de limitação do site. -->
 
-.intro h2 {
-  font-size: 3rem;
-  margin-bottom: 50px;
-  color: #000000ff;
-}
+      <div class="secao limitacoes">
+        <h2>Limitações</h2>
+        <p>
+          Alguns itens não podem ser aceitos no sistema por questões de
+          segurança.
+        </p>
+      </div>
 
+      <!-- Seção de dicas do site. -->
 
-.cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-  padding: 20px;
-}
+      <div class="secao dicas">
+        <h2>Dicas</h2>
+        <p>
+          Use palavras-chave específicas e verifique a lista de novos itens
+          regularmente.
+        </p>
+      </div>
+    </main>
+     <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-left">
+        <img src="img/logoSenai.png" alt="Logo SENAI" class="footer-logo">
+      </div>
 
-.card {
-  background-color: #e84910 !important;
-  color: #ffffff !important;
-  padding: 20px;
-  border-radius: 15px;
-  text-align: center;
-  font-weight: bold;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-  flex: 1 1 200px;
-  max-width: 250px;
-  transition: transform 0.3s;
-}
+      <div class="footer-social">
+        <a href="#"><i class="bi bi-facebook"></i></a>
+        <a href="#"><i class="bi bi-instagram"></i></a>
+        <a href="#"><i class="bi bi-twitter-x"></i></a>
+        <a href="#"><i class="bi bi-youtube"></i></a>
+        <a href="#"><i class="bi bi-linkedin"></i></a>
+        <a href="#"><i class="bi bi-tiktok"></i></a>
+      </div>
+    </div>
 
-.card:hover {
-  transform: scale(1.05);
-}
+    <hr class="footer-divider">
 
-.box-grande {
-  display: flex;
-  justify-content: center;
-  margin: 40px 0;
-}
+    <div class="footer-bottom">
+      <p>Copyright ©2025 SENAI - Todos os direitos reservados</p>
+      <div class="footer-links">
+        <a href="#">Contato</a>
+        <span>•</span>
+        <a href="#">Termos de uso e Política de privacidade</a>
+      </div>
+    </div>
+  </footer>
 
-.box-grande img {
-  width: 80%;
-  border-radius: 15px;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-}
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
-.titulo-faq {
-  text-align: center;
-  margin-bottom: 20px;
-  color: #000000ff;
-}
-
-.accordion-button {
-  background: #1e90ff;
-  color: #fff;
-  font-weight: bold;
-  font-size: 1.2rem;
-}
-
-.accordion-body {
-  background: #fffaf5;
-  color: #000000ff;
-  font-size: 1.1rem;
-}
-
-.secao {
-  background-color: #f9efe5;
-  padding: 20px;
-  margin: 20px 0;
-  border-radius: 12px;
-}
-
-.limitacoes {
-  border-left: 5px solid #e84910;
-}
-
-.dicas {
-  border-left: 5px solid #e84910;
-}
-
-.hero {
-  background-color: #003c90;
-  color: #f5f5f5;
-  padding: 60px 50px 160px;
-  height: 450px;
-  position: relative;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-}
-
-.seta {
-  width: 120px;
-  position: absolute;
-  z-index: 1;
-}
-.seta-superior1 {
-  bottom: 40px;
-  left: 60px;
-}
-.seta-superior2 {
-  bottom: 40px;
-  left: 180px;
-}
-.seta-inferior1 {
-  top: 30px;
-  right: 65px;
-}
-.seta-inferior2 {
-  top: 30px;
-  right: 180px;
-}
-.footer {
-  background-color: #204B8C;
-  color: white;
-  font-family: "Segoe UI", sans-serif;
-  padding: 50px 0 15px 0;
-  width: 100%;
-}
-.footer-container {
-  display: flex;
-  justify-content: space-between; 
-  align-items: center;
-  width: 100%; 
-  padding: 0 40px;
-  font-size: 13px;
-  box-sizing: border-box;
-}
-.footer-logo {
-  height: 45px;
-}
-.footer-social {
-  display: flex;
-  gap: 12px;
-}
-.footer-social a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: white;
-  color: #204B8C;
-  border-radius: 50%;
-  width: 28px;
-  height: 28px;
-  font-size: 14px;
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
-.footer-social a:hover {
-  background-color: #d9d9d9;
-}
-.footer-divider {
-  width: 95%;
-  margin: 15px auto;
-  border: 0;
-  border-top: 1px solid rgba(255, 255, 255, 0.3);
-}
-.footer-bottom {
-  display: flex;
-  justify-content: space-between; 
-  align-items: center;
-  width: 100%; 
-  padding: 0 40px; 
-  font-size: 13px;
-  box-sizing: border-box;
-  margin-bottom:40px;
-}
-.footer-bottom p {
-  margin: 0;
-  text-align: left;
-}
-.footer-links {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  text-align: right;
-}
-.footer-links a {
-  color: white;
-  text-decoration: none;
-}
-.footer-links a:hover {
-  text-decoration: underline;
-}
+    
+  </body>
+</html>
 
