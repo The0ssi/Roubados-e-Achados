@@ -1,7 +1,7 @@
 body {
   margin: 0;
   font-family: "Arial", sans-serif;
-  background-color: #fffaf5;
+  background-color: rgb(253, 253, 250);
   color: #2e304bff;
 }
 
@@ -14,9 +14,9 @@ body {
   position: relative;
   z-index: 100;
 }
+/* HERO */
 .hero {
-  background-color: #003c90;
-  color: #f5f5f5;
+  color: rgb(253, 253, 250);
   padding: 60px 50px 160px;
   height: 400px;
   position: relative;
@@ -25,69 +25,93 @@ body {
   flex-direction: column;
   justify-content: flex-start;
 }
-
-/* Imagens dos objetos caindo */
-.man-img1 {
+.man-img1{
   position: absolute;
+  top:0;
+  left:0;
+  width: 1905px;
+  heighe: auto;
+}
+
+
+/* PAGINA DE AJUDA */
+.return-section {
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 40px 0;
+}
+.blue-line {
+  position: absolute;
+  height: 4px;
+  background-color:rgb(224, 125, 67);
+  top: 50%;
+  width: 37%;
+}
+.blue-line.left {
+  left: 0;
+}
+.blue-line.right {
   right: 0;
-  top: 0;
-  height: 500px;
-  width: 650px;
-  z-index: 0;
-  opacity: 0.4; /* Efeito de apagamento */
-  filter: brightness(0.7); /* Escurecimento suave */
 }
-.man-img2 {
+.return-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  z-index: 2;
+  margin-top: 20px;
+}
+.return-text h2 {
+  font-size: 30px;
+  margin-bottom: 8px;
+  color: #000;
+  text-align: center;
+}
+.return-text p {
+  font-size: 12px;
+  color: #333;
+  text-align: center;
+}
+.return-image {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.return-image img {
+  width: 250px;
+  border-radius: 16px;
+  object-fit: cover;
+}
+.white-box {
   position: absolute;
-  right: 725px;
-  top: 0px;
-  height: 500px;
-  width: 640px;
-  z-index: 0;
-  opacity: 0.4; /* Efeito de apagamento */
-  filter: brightness(0.7); /* Escurecimento suave */
+  top: 50%;
+  right: -10px;
+  transform: translateY(-50%);
+  background-color: rgb(253, 253, 250);
+  border-radius: 40px 0 0 40px;
+  width: 55px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.man-img3{
-  position: absolute;
-  left: -70px;
-  top: 0;
-  height: 450px;
-  width: 607px;
-  z-index: 0;
-  opacity: 0.4; /* Efeito de apagamento */
-  filter: brightness(0.7); /* Escurecimento suave */
+.orange-arrow {
+  background-color: #f25c05;
+  color: rgb(253, 253, 250);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-
-
-/* Hero-text, para garantir que o conteúdo de texto fique por cima das imagens */
-.hero-text {
-  max-width: 380px;
-  z-index: 10;
-  margin-top: 10px;
-}
-
-.hero p {
-  font-size: 17px;
-  margin-bottom: 35px;
-  line-height: 1.5;
-  color: #dbe6ff;
-  max-width: 510px;
-}
+/* PAGINA DE AJUDA */
 
 /* Título */
-.hero h1 {
-  font-size: 70px;  /* Tamanho ajustado do título */
-  font-weight: 700;
-  margin-bottom: 20px; /* Ajustado para o espaçamento correto */
-  line-height: 1.1;
-  color: #f4f1f1;
-  text-align: center; /* Centralizado no meio da tela */
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translateX(-50%); /* Centraliza horizontalmente */
-  z-index:10;
-}
 
 .logo {
   height: 30px;
@@ -109,10 +133,10 @@ body {
 }
 
 .hero {
-  background-color: #003c90;
+
   color: white;
   padding: 120px 50px 200px;
-  height: 450px;
+  height: 400px;
   position: relative;
   overflow: hidden;
   display: flex;
@@ -122,7 +146,7 @@ body {
 
 .ajuda-centralizada {
   text-align: center;
-  color: #ffffffff;
+  color:rgb(253, 253, 250);
   z-index: 10;
 }
 
@@ -180,7 +204,7 @@ body {
 
 .card {
   background-color: #e84910 !important;
-  color: #ffffff !important;
+  color: rgb(253, 253, 250) !important;
   padding: 20px;
   border-radius: 15px;
   text-align: center;
@@ -221,13 +245,13 @@ body {
 }
 
 .accordion-body {
-  background: #fffaf5;
+  background: rgb(253, 253, 250);
   color: #000000ff;
   font-size: 1.1rem;
 }
 
 .secao {
-  background-color: #f9efe5;
+  background-color: rgb(253, 253, 250);
   padding: 20px;
   margin: 20px 0;
   border-radius: 12px;
@@ -242,10 +266,10 @@ body {
 }
 
 .hero {
-  background-color: #003c90;
-  color: #f5f5f5;
+
+  color: rgb(253, 253, 250);
   padding: 60px 50px 160px;
-  height: 450px;
+  height: 400px;
   position: relative;
   overflow: hidden;
   display: flex;
@@ -311,7 +335,7 @@ body {
   transition: all 0.3s ease;
 }
 .footer-social a:hover {
-  background-color: #d9d9d9;
+  background-color:rgb(253, 253, 250);
 }
 .footer-divider {
   width: 95%;
