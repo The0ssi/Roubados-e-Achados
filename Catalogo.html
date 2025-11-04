@@ -25,17 +25,29 @@
   <!--HERO-->
   <section class="hero">
       <div class="hero-text">
-          <h1>Cadastre o Item</h1>
-          <img src="img/objetos caido.png" alt="Objetos caindo" class="man-img1">
-          <img src="img/objetos caido.png" alt="Objetos caindo" class="man-img2">
-          <img src="img/objetos caido.png" alt="Objetos caindo" class="man-img3">
+          <img src="img/achados e perdidos.png" alt="Objetos caindo" class="man-img1">
           <div class="tabs">
             <div class="line"></div>
-            <button class="tab" id="achado" onclick="changeTab('achado')">Registrar achado</button>
-            <button class="tab" id="perdido" onclick="changeTab('perdido')">Registrar perdido</button>            
+            <button class="tab" id="achado" onclick="changeTab('achado')">Página de achados</button>
+            <button class="tab" id="perdido" onclick="changeTab('perdido')">Página de perdidos</button>            
         </div>
       </div>
   </section>
+
+  <!--PAGINA DE AJUDA -->
+  <section class="return-section">
+    <div class="blue-line left"></div>
+
+    <div class="return-content">
+      <div class="return-text">
+        <h2>Catálogo dos itens achados</h2>
+        <p>Catálogo de achados — seu item pode estar aqui.</p>
+      </div>
+    </div>
+
+    <div class="blue-line right"></div>
+  </section>
+  <!--PAGINA DE AJUDA -->
 
   <!-- Container Principal -->
   <div class="main-container">
@@ -95,9 +107,12 @@
         </label>
         <label class="filtro-checkbox">
           <input type="checkbox">
-          Sala 1
+          Sala 54
         </label>
-        <span class="filtro-ellipsis">...</span>
+        <label class="filtro-checkbox">
+          <input type="checkbox">
+          Sala 36
+        </label>
       </div>
     </aside>
 
