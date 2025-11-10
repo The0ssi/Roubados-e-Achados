@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Login</title>
-  <link rel="stylesheet" href="/css/styleLogin.css">
+  <link rel="stylesheet" href="css/styleLogin.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
   <script src="https://accounts.google.com/gsi/client" async defer></script>
 </head>
@@ -15,10 +15,6 @@
       <div class="left">
         <h2 class="title">Fazer Login</h2>
 
-        <!-- Botão Google estilizado -->
-        <button id="googleLogin" class="google-btn">
-          <i class="fab fa-google"></i> Continue com o Google
-        </button>
 
         <form class="form">
           <label class="label-input">
@@ -45,24 +41,7 @@
     </div>
   </div>
 
-  <script>
-    // Inicializa login Google
-    window.onload = function () {
-      google.accounts.id.initialize({
-        client_id: "SEU_CLIENT_ID_AQUI",
-        callback: handleCredentialResponse
-      });
-    };
-
-    function handleCredentialResponse(response) {
-      console.log("Token JWT: ", response.credential);
-      // Aqui você envia para o backend
-    }
-
-    // Botão estilizado chama o prompt do Google
-    document.getElementById("googleLogin").addEventListener("click", function () {
-      google.accounts.id.prompt();
-    });
-  </script>
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
+  <script src="js/scriptIndex.js"></script>
 </body>
 </html>
