@@ -66,3 +66,25 @@ filtros.forEach(filtro => {
     }
   });
 });
+
+// Verifica se está logado
+const isLoggedIn = sessionStorage.getItem("isLoggedIn");
+const isAdmin = sessionStorage.getItem("isAdmin") === "true"; 
+
+// Seleciona o botão
+const registerButton = document.querySelector(".register-button");
+
+// Caso não esteja logado → opcional redirecionar
+if (!isLoggedIn) {
+    console.warn("Usuário não está logado!");
+    // window.location.href = "login.html"; // Se quiser forçar login
+}
+
+// SE FOR ALUNO
+if (!isAdmin) {
+    registerButton.textContent = "Ver todos itens";
+    registerButton.href = "/catalogo.html";   // coloque o nome da sua página de catálogo
+}
+
+// SE FOR SECRETARIA → mantém como está (Registro.html)
+// não precisa fazer nada
