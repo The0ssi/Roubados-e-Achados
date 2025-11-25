@@ -1,20 +1,20 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap');
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   background-color: rgb(253, 253, 250);
-  color: #333;
 }
 
-/* ========== HEADER ========== */
+/* HEADER */
 .header {
-  background-color: rgb(253, 253, 250)
+  background-color:rgb(253, 253, 250);
   padding: 10px 20px;
   display: flex;
   justify-content: space-between;
@@ -35,6 +35,7 @@ body {
 .user-name {
   font-size: 14px;
 }
+/* HEADER */
 
 /* ========== CONTAINER PRINCIPAL ========== */
 .container {
@@ -118,7 +119,7 @@ body {
 }
 
 .info i {
-  color: #164194;
+  color: #f25c05;
   margin-right: 6px;
 }
 .item-imagem {
@@ -294,6 +295,9 @@ body {
 }
 .card:hover {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+.fas{
+  color: #f25c05;
 }
 .fa-user, 
 .fa-location-dot{
