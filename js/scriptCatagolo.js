@@ -23,3 +23,19 @@ function changeTab(tab) {
   }
   console.log("A aba selecionada é: " + tab);
 }
+
+
+function toggleMenuFiltros() {
+    const menu = document.getElementById("menu-filtros-mobile");
+    menu.style.display = menu.style.display === "flex" ? "none" : "flex";
+}
+
+// Clonar conteúdo do aside (filtros completos) e jogar dentro do menu mobile
+document.addEventListener("DOMContentLoaded", () => {
+    const asideFiltros = document.querySelector(".filtro-container");
+    const destino = document.querySelector(".filtros-completos");
+
+    if (asideFiltros && destino) {
+        destino.innerHTML = asideFiltros.innerHTML;
+    }
+});
