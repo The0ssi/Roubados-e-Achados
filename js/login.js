@@ -61,11 +61,11 @@ loginForm.addEventListener('submit', function(event) {
         if (userFound.isAdmin) {
             console.log(`${userFound.username} é da Secretaria.`);
             // Ação: Redirecionar para a página da Secretaria
-            window.location.href = 'pagina_secretaria.html'; // Altere o nome do arquivo se necessário
+            window.location.href = 'Home.html'; // Altere o nome do arquivo se necessário
         } else {
             console.log(`${userFound.username} é Aluno(a).`);
             // Ação: Redirecionar para a página do Aluno
-            window.location.href = 'pagina_aluno.html'; // Altere o nome do arquivo se necessário
+            window.location.href = 'Home.html'; // Altere o nome do arquivo se necessário
         }
 
         // Armazenamento no navegador para manter o estado (muito útil!)
