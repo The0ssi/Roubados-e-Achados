@@ -1,3 +1,56 @@
+/* Paginador */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px; 
+    gap: 8px; 
+}
+
+/* Botões padrão */
+.pagination a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #333;
+   
+    border-radius: 50%;
+    transition: all 0.2s ease;
+}
+
+/* Botão ativo */
+.pagination .active {
+    background-color: #f76b29;
+    color: white;
+    border-color: #f76b29;
+}
+
+/* Setas (sem borda, mas mesmo tamanho) */
+.pagination .prev,
+.pagination .next {
+    border: none;
+    background-color: transparent;
+    font-size: 28px;
+    width: 40px;
+    height: 40px;
+    color:#333;
+}
+
+/* Hover */
+.pagination a:hover {
+    background-color: #ddd;
+}
+
+/* Hover nas setas */
+.pagination .prev:hover,
+.pagination .next:hover {
+    background-color: transparent;
+    color: #c95b1f;
+}
 * {
   margin: 0;
   padding: 0;
@@ -37,22 +90,21 @@ body {
 
 /* HERO */
 .hero {
-  color: rgb(253, 253, 250);
-  padding: 60px 50px 160px;
   height: 400px;
   position: relative;
   overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
 }
-.man-img1{
+
+.man-img1 {
   position: absolute;
-  top:0;
-  left:0;
-  width: 1905px;
-  heighe: auto;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* corta a imagem sem deformar */
+  object-position: center top; /* foca nos doguinhos */
 }
+
 .bottom-curve { 
   position: absolute;
   bottom: 0; 
@@ -66,7 +118,7 @@ body {
   align-items: center; 
   justify-content: end; 
   box-shadow: 0 -2px 10px rgba(0,0,0,0.05); 
-  dding-bottom: 10px; 
+  margin-bottom: 10px; 
 }
 .register-button { 
   background: rgb(253, 253, 250); 
@@ -150,178 +202,7 @@ body {
   background-color: #ff6a00;
   transition: left 0.3s, width 0.3s;
 }
-#formulario {
-  padding: 20px;
-  border: 1px dashed #ddd;
-  display: none;
-}
-#formulario.achado,
-#formulario.perdido {
-  display: block;
-}
 /* TABS  */
-
-/* Remover a curva da parte inferior original */
-.bottom-curve {
-  display: none;
-}
-
-/* Sombra das setas */
-.seta-superior, .seta-inferior {
-  box-shadow: 0 0 5px rgba(0,0,0,0.2);
-}
-
-.filtro-container {
-  width: 250px;
-  padding: 20px;
-  background-color: rgb(253, 253, 250);
-  font-family: Arial, sans-serif;
-  font-size: 14px;
-  color: #333;
-  margin-top:20px;
-}
-
-.filtro-titulo {
-  font-size: 18px;
-  margin-bottom: 20px;
-  padding-bottom: 5px;
-}
-
-.filtro-secao {
-  margin-bottom: 25px;
-}
-
-.filtro-subtitulo {
-  font-weight: bold;
-  font-size: 14px;
-  margin-bottom: 10px;
-  padding-top: 20px;
-  border-top: 1px solid #5c3c2f;
-}
-
-.filtro-checkbox {
-  display: block;
-  margin-bottom: 8px;
-  cursor: pointer;
-}
-
-.filtro-checkbox input[type="checkbox"] {
-  margin-right: 8px;
-  transform: scale(1.1);
-}
-
-.filtro-input {
-  width: 100%;
-  padding: 6px;
-  margin-bottom: 10px;
-  border: 1px solid #aaa;
-  border-radius: 2px;
-  font-size: 14px;
-  box-sizing: border-box;
-}
-
-.filtro-ellipsis {
-  display: block;
-  font-size: 18px;
-  margin-top: 10px;
-}
-
-
-/* Definindo a estrutura do layout */
-.main-container {
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  gap: 30px;
-}
-
-/* Container dos filtros */
-.filtro-container {
-  width: 250px;
-  padding: 20px;
-  background-color: rgb(253, 253, 250);
-  font-family: Arial, sans-serif;
-  font-size: 14px;
-  color: #333;
-  flex-shrink: 0; 
-}
-.card-container {
-  display: flex;
-  gap: 20px;
-  justify-content: flex-start;
-  flex-wrap: wrap;
-  flex-grow: 1;
-  margin-top: 75px;
-
-}
-
-.card {
-  width: 98%;
-  border-radius: 15px;
-  overflow: hidden;
-  background-color: rgb(253, 253, 250);
-  display: flex;
-  flex-direction: column;
-}
-
-/* Responsividade */
-@media (max-width: 768px) {
-  .card {
-    width: 48%;
-  }
-}
-@media (max-width: 480px) {
-  .card {
-    width: 100%;
-  }
-}
-.card {
-  width: 98%;
-  border-radius: 15px;
-  background: #fff;
-  display: flex;
-  flex-direction: column;
-  
-}
-
-.card-image {
-  position: relative;
-  width: 379px;
-  height: 300px;
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
-  overflow: hidden;
-}
-
-.card-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; 
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
-}
-
-.overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  background-color: rgba(0, 0, 0, 0.6);
-  color: white;
-  padding: 8px 0;
-  text-align: center;
-  font-size: 1.4rem;
-  font-weight: 600;
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
-  user-select: none;
-}
-
-.card-description {
-  padding: 20px;
-  color: #333;
-  background-color: rgb(253, 253, 250);
-}
 
 
 /* PAGINA DE AJUDA */
@@ -336,9 +217,9 @@ body {
 .blue-line {
   position: absolute;
   height: 4px;
-  background-color:rgb(224, 125, 67);
+  background-color: #ff6a00;
   top: 50%;
-  width: 37%;
+  width: 30%;
 }
 .blue-line.left {
   left: 0;
@@ -352,18 +233,15 @@ body {
   justify-content: center;
   gap: 40px;
   z-index: 2;
-  margin-top: 20px;
 }
 .return-text h2 {
   font-size: 30px;
   margin-bottom: 8px;
   color: #000;
-  text-align: center;
 }
 .return-text p {
   font-size: 12px;
   color: #333;
-  text-align: center;
 }
 .return-image {
   position: relative;
@@ -380,7 +258,7 @@ body {
   top: 50%;
   right: -10px;
   transform: translateY(-50%);
-  background-color: #f5f5f5;
+  background-color: rgb(253, 253, 250);
   border-radius: 40px 0 0 40px;
   width: 55px;
   height: 55px;
@@ -390,7 +268,7 @@ body {
 }
 .orange-arrow {
   background-color: #f25c05;
-  color: #f5f5f5;
+  color: rgb(253, 253, 250);
   border-radius: 50%;
   width: 40px;
   height: 40px;
@@ -402,83 +280,265 @@ body {
 /* PAGINA DE AJUDA */
 
 
-/* Filtros  */
+
+
+
+
+.filtro-container {
+  width: 250px;
+  padding: 20px;
+  background-color: rgb(253, 253, 250);
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  color: #333;
+  margin-top:20px;
+}
+
+.filtro-titulo {
+  font-size: 18px;
+  margin-bottom: 20px;
+  padding-bottom: 5px;
+}
+.filtro-secao {
+  margin-bottom: 25px;
+}
+.filtro-subtitulo {
+  font-weight: bold;
+  font-size: 14px;
+  margin-bottom: 10px;
+  padding-top: 20px;
+  border-top: 1px solid #5c3c2f;
+}
+.filtro-checkbox {
+  display: block;
+  margin-bottom: 8px;
+  cursor: pointer;
+}
+.filtro-checkbox input[type="checkbox"] {
+  margin-right: 8px;
+  transform: scale(1.1);
+}
+.filtro-input {
+  width: 100%;
+  padding: 6px;
+  margin-bottom: 10px;
+  border: 1px solid #aaa;
+  border-radius: 2px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+.filtro-ellipsis {
+  display: block;
+  font-size: 18px;
+  margin-top: 10px;
+}
 .filtro-checkbox input[type="checkbox"] {
   accent-color: #f25c05;
   transform: scale(1.1);
 }
-
-
-
-
-/* Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+.filtro-container {
+  width: 250px;
+  padding: 20px;
+  background-color: rgb(253, 253, 250);
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  color: #333;
+  flex-shrink: 0; 
 }
 
-/* Corpo */
-body {
+
+
+
+/* ----------------------------- */
+/* FILTROS MOBILE (530px)       */
+/* ----------------------------- */
+
+.filtros-mobile {
+    display: none;
+}
+
+.menu-filtros-mobile {
+    display: none;
+}
+
+/* --- Ativa no mobile --- */
+@media (max-width: 530px) {
+
+    /* Oculta o filtro lateral */
+    .filtro-container {
+        display: none !important;
+    }
+
+    /* Mostra barra reduzida */
+    .filtros-mobile {
+        display: flex;
+        gap: 0.5rem;
+        padding: 10px 0;
+        overflow-x: auto;
+        white-space: nowrap;
+        margin-left: 20px;
+    }
+
+    .filtro-mb {
+        background: #f5f5f5;
+        border: 1px solid #000;
+        padding: 6px 14px;
+        border-radius: 20px;
+        font-size: 13px;
+        cursor: pointer;
+        flex-shrink: 0;
+    }
+
+    .filtro-mb.ativo {
+        background: #D65417;
+        color: white;
+        border: none;
+    }
+
+    /* Botão hamburguer */
+    .ver-mais-mb {
+        background: #D65417;
+        color: white;
+        border: none;
+        font-size: 15px;
+        padding: 6px 12px;
+    }
+
+    /* --- MENU EXPANDIDO (estilo SHEIN / Shopee) --- */
+    .menu-filtros-mobile {
+        position: fixed;
+        top: 0; left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.6);
+        display: none;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+    }
+
+    .menu-filtros-content {
+        width: 90%;
+        max-height: 80%;
+        overflow-y: auto;
+        background: white;
+        padding: 20px;
+        border-radius: 15px;
+    }
+
+    .fechar-menu {
+        margin-top: 15px;
+        width: 100%;
+        padding: 10px;
+        border: none;
+        border-radius: 10px;
+        background: #D65417;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+    }
+}
+
+
+.main-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 30px;
+}
+
+/* CONTAINER DOS CARDS */
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    padding: 20px 0;
+    width: 100%;
+    margin-left: 20px;
+}
+
+/* CARD */
+.card-item {
+    width: 250px;
     font-family: Arial, sans-serif;
 }
 
-/* Paginador */
-.pagination {
+/* CAIXA DA IMAGEM */
+.card-img {
+    position: relative;
+    width: 250px;
+    height: 220px;
+    border-radius: 18px;
+    overflow: hidden;
+    background: #ddd;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 10px; 
-    gap: 8px; 
 }
 
-/* Botões padrão */
-.pagination a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    text-decoration: none;
-    font-size: 18px;
+/* IMAGEM REAL */
+.card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* FAIXA ESCURA SUPERIOR */
+.card-title {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    padding: 8px 0;
+    text-align: center;
+    font-weight: bold;
+    font-size: 16px;
+    color: #fff;
+    background: rgba(0,0,0,0.45);
+    backdrop-filter: blur(2px);
+}
+
+/* PLACEHOLDER SEM IMAGEM */
+.card-img.placeholder {
+    background: #cfcfcf;
+    color: #5a5a5a;
+    font-size: 40px;
+}
+
+/* TEXTO */
+.card-desc {
+    margin-top: 10px;
+    font-size: 13px;
+    color: #444;
+}
+
+/* INFOS DO USUÁRIO + LOCAL */
+.card-info p {
+    margin-top: 4px;
+    font-size: 13px;
     color: #333;
-   
-    border-radius: 50%;
-    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 6px;
 }
 
-/* Botão ativo */
-.pagination .active {
-    background-color: #f76b29;
-    color: white;
-    border-color: #f76b29;
+/* ÍCONES */
+.card-info i {
+    color: #000;
 }
 
-/* Setas (sem borda, mas mesmo tamanho) */
-.pagination .prev,
-.pagination .next {
-    border: none;
-    background-color: transparent;
-    font-size: 28px;
-    width: 40px;
-    height: 40px;
-    color:#333;
+/* RESPONSIVIDADE */
+@media (max-width: 1000px) {
+    .cards-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
-/* Hover */
-.pagination a:hover {
-    background-color: #ddd;
+@media (max-width: 760px) {
+    .cards-container {
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
 }
-
-/* Hover nas setas */
-.pagination .prev:hover,
-.pagination .next:hover {
-    background-color: transparent;
-    color: #c95b1f;
-}
-
-
-
 
 
 /*RodaPÉ*/
@@ -489,27 +549,22 @@ body {
   padding: 25px 0 15px 0;
   width: 100%;
 }
-
-/* Parte de cima */
 .footer-container {
   display: flex;
-  justify-content: space-between; /* manda um pra cada canto */
+  justify-content: space-between;
   align-items: center;
   width: 100%;
   padding: 0 40px;
   font-size: 13px;
   box-sizing: border-box;
 }
-
 .footer-logo {
   height: 45px;
 }
-
 .footer-social {
   display: flex;
   gap: 12px;
 }
-
 .footer-social a {
   display: flex;
   align-items: center;
@@ -523,20 +578,15 @@ body {
   text-decoration: none;
   transition: all 0.3s ease;
 }
-
 .footer-social a:hover {
   background-color: #d9d9d9;
 }
-
-/* Linha divisória */
 .footer-divider {
   width: 95%;
   margin: 15px auto;
   border: 0;
   border-top: 1px solid rgba(255, 255, 255, 0.3);
 }
-
-/* Parte inferior – ocupa toda a largura */
 .footer-bottom {
   display: flex;
   justify-content: space-between; 
@@ -546,12 +596,10 @@ body {
   font-size: 13px;
   box-sizing: border-box;
 }
-
 .footer-bottom p {
   margin: 0;
   text-align: left;
 }
-
 .footer-links {
   display: flex;
   align-items: center;
@@ -563,16 +611,12 @@ body {
   color: white;
   text-decoration: none;
 }
-
 .footer-links a:hover {
   text-decoration: underline;
 }
 .fa-user,.glyphicon{
     margin-right:10px;
 }
-
-
-/* Rodapé */
 .footer {
   background-color: #204B8C;
   color: white;
@@ -580,10 +624,268 @@ body {
   padding: 25px 0 15px 0;
   width: 100%;
 }
+/* Rodapé */
 
-/* Esconder rodapé em telas pequenas */
 @media (max-width: 768px) {
   .footer {
     display: none;
   }
+}
+@media (max-width: 768px) {
+  .card {
+    width: 48%;
+  }
+}
+@media (max-width: 480px) {
+  .card {
+    width: 100%;
+  }
+}
+
+@media (max-width: 1114px) {
+
+  /* Curva ocupando a largura inteira */
+  .bottom-curve {
+    width: 100%;
+    border-radius:0;
+    justify-content: center;
+    padding-bottom: 20px;
+  }
+
+  /* Botão no centro e menor */
+  .register-button {
+    margin-top: 30px;
+    width: 80%;
+    max-width: 380px;
+    height: 50px;
+    font-size: 15px;
+  }
+
+  /* Linha azul não pode passar sobre o texto */
+  .blue-line {
+    display: none; /* remove completamente quando a tela aperta */
+  }
+
+  /* Bloco de devolução mais vertical */
+  .return-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .return-image {
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    display: none;
+  }
+}
+@media (max-width: 1000px) {
+  .form-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .image-upload {
+    width: 100%;
+    margin-top: 30px;
+  }
+
+  .upload-box {
+    max-width: 100%;
+    height: 300px;
+  }
+}
+
+@media (max-width: 1114px) {
+
+  .form-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .image-upload {
+    width: 100%;
+    justify-content: center;
+    flex: none; /* remove aquele flex fixo */
+  }
+
+  .upload-box {
+    left: 0; /* tira o deslocamento lateral */
+    width: 90%;
+    max-width: 400px;
+    height: 320px;
+    margin: 0 auto; /* centraliza */
+  }
+}
+@media (max-width: 768px) {
+    body, html {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+    }
+
+}
+@media (max-width: 768px) {
+    .upload-area {
+        margin: 0 auto !important;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
+@media (max-width: 768px) {
+    .item-card, .suggestion-card {
+        margin: 0 auto !important;
+    }
+}
+/* --- AJUSTE PARA TELA PEQUENA (COMPORTAMENTO IGUAL AO BOTTOM-CURVE) --- */
+@media (max-width: 1114px) {
+
+  /* Posicionar as TABS na parte inferior como o bottom-curve */
+  .tabs {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 90px;
+    border-radius: 0;
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    padding-bottom: 20px;
+    align-items: end;
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.05);
+    z-index: 5;
+  }
+
+  /* Ajuste visual dos botões */
+  .tab {
+    font-size: 15px;
+    color: #f25c05;
+  }
+
+  .tab:hover {
+    color: #ff6a00;
+  }
+
+  /* Linha de seleção */
+  .line {
+    bottom: 10px;
+    height: 3px;
+    width: 40%;
+    background: #f25c05;
+  }
+
+  /* Remover curva do hero (caso ainda exista) */
+  .bottom-curve {
+    display: none !important;
+  }
+}
+
+
+/* MARGENS LATERAIS PADRÃO PARA MOBILE */
+@media (max-width: 768px) {
+
+    .form-section,
+    .form-container,
+    .lost-item-form,
+    .suggestion-section,
+    .return-section {
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+    }
+
+    .suggestion-section h2 {
+        margin-left: 5px; /* opcional */
+    }
+}
+
+@media (max-width: 570px) {
+    .hero-text {
+        display: block !important;
+        text-align: left !important;
+    }
+
+    .man-img1 {
+        display: block !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        left: 0 !important;
+        transform: none !important;
+    }
+}
+
+.upload-box input[type="file"] {
+    white-space: nowrap;
+    max-width: 100%;
+}
+.upload-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; /* espaço entre botão e texto */
+}
+@media (max-width: 570px) {
+    .man-img1 {
+        object-position: left top !important; /* <-- muda o foco da imagem */
+    }
+}
+/* TELAS MUITO GRANDES ─ acima de 1950px */
+@media (min-width: 1650px) {
+
+    .card-item {
+        width: 350px;
+    }
+
+    .card-img {
+        width: 350px;
+        height: 270px;
+    }
+
+    .cards-container {
+        grid-template-columns: repeat(3, 1fr); /* Ajusta para telas grandes */
+        gap: 35px;
+    }
+}
+
+/* Botão salvar filtros (desktop) */
+.btn-salvar-filtros {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #D65417;
+    color: white;
+    border: none;
+    font-size: 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-salvar-filtros:hover {
+    background-color: #b64814;
+}
+
+/* Botão salvar filtros (mobile) */
+.btn-salvar-filtros-mobile {
+    width: 100%;
+    padding: 12px;
+    background-color: #D65417;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+.btn-salvar-filtros-mobile:hover {
+    background-color: #b64814;
 }
