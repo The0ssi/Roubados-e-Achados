@@ -15,16 +15,15 @@
       <div class="left">
         <h2 class="title">Fazer Login</h2>
 
-
-        <form class="form">
+        <form class="form" id="loginForm">
           <label class="label-input">
             <i class="fas fa-user icon-modify"></i>
-            <input type="text" placeholder="Usuário">
+            <input type="text" id="usernameInput" placeholder="Usuário">
           </label>
 
           <label class="label-input">
             <i class="fas fa-lock icon-modify"></i>
-            <input type="password" placeholder="Senha">
+            <input type="password" id="passwordInput" placeholder="Senha">
           </label>
 
           <button type="submit" class="btn">Entrar</button>
@@ -42,6 +41,6 @@
   </div>
 
   <script src="https://accounts.google.com/gsi/client" async defer></script>
-  <script src="js/logiscript.js"></script>
+  <script src="js/login.js"></script>
 </body>
 </html>
