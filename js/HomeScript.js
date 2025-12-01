@@ -35,37 +35,13 @@ function setupPagination(sectionSelector, cardSelector, cardsPorPagina, totalPag
   });
 }
 
-// Paginação para a seção "Achados"
-setupPagination('.produtos-section', '.card.achado', 5, 3);  // Ajuste conforme necessário
-
-// Paginação para a seção "Perdidos"
-setupPagination('.perdidos', '.card.perdido', 5, 3);  // Ajuste conforme necessário
-
+setTimeout(() => {
+    setupPagination('.produtos-section', '.card.achado', 5, 3);
+    setupPagination('.perdidos', '.card.perdido', 5, 3);
+}, 500);
 
 
 
-// Selecionando todos os botões de filtro
-const filtros = document.querySelectorAll('.filtro');
-const filtroInicial = document.querySelector('.filtro.ativo'); // O botão "..."
-
-filtros.forEach(filtro => {
-  filtro.addEventListener('click', () => {
-    // Remover a classe 'ativo' de todos os botões
-    filtros.forEach(btn => btn.classList.remove('ativo'));
-    
-    // Adicionar a classe 'ativo' ao botão clicado
-    filtro.classList.add('ativo');
-    
-    // Verificar se o filtro "..." foi clicado
-    if (filtro !== filtroInicial) {
-      // Quando "..." não for o ativo, esconder o botão "..."
-      filtroInicial.style.display = 'none';
-    } else {
-      // Caso contrário, exibir o botão "..."
-      filtroInicial.style.display = 'inline-block'; // ou 'block', depende do layout
-    }
-  });
-});
 
 // Verifica se está logado
 const isLoggedIn = sessionStorage.getItem("isLoggedIn");
@@ -83,8 +59,134 @@ if (!isLoggedIn) {
 // SE FOR ALUNO
 if (!isAdmin) {
     registerButton.textContent = "Ver todos itens";
-    registerButton.href = "/catalogo.html";   // coloque o nome da sua página de catálogo
+    registerButton.href = "catalogo.html";   // coloque o nome da sua página de catálogo
 }
 
-// SE FOR SECRETARIA → mantém como está (Registro.html)
-// não precisa fazer nada
+// Função para configurar a paginação para uma seção específica
+function setupPagination(sectionSelector, cardSelector, cardsPorPagina, totalPaginas) {
+  const cards = document.querySelectorAll(`${sectionSelector} ${cardSelector}`);
+  const paginationDotsContainer = document.querySelector(`${sectionSelector} .pagination-dots`);
+
+  // Limpa bolinhas anteriores
+  paginationDotsContainer.innerHTML = '';
+
+  // Cria bolinhas de acordo com o total de páginas
+  for (let i = 0; i < totalPaginas; i++) {
+    const dot = document.createElement('span');
+    dot.classList.add('dot');
+    if (i === 0) dot.classList.add('active');
+    paginationDotsContainer.appendChild(dot);
+
+    dot.addEventListener('click', () => {
+      // Atualiza bolinhas ativas
+      document.querySelectorAll(`${sectionSelector} .dot`).forEach(d => d.classList.remove('active'));
+      dot.classList.add('active');
+
+      // Exibe cards do grupo clicado
+      cards.forEach((card, index) => {
+        if (index >= i * cardsPorPagina && index < (i + 1) * cardsPorPagina) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  }
+
+  // Exibe os primeiros cards ao carregar
+  cards.forEach((card, index) => {
+    card.style.display = index < cardsPorPagina ? 'block' : 'none';
+  });
+}
+
+setTimeout(() => {
+    setupPagination('.produtos-section', '.card.achado', 5, 3);
+    setupPagination('.perdidos', '.card.perdido', 5, 3);
+}, 500);
+
+
+// Função para carregar os itens da API e gerar os cards
+// Função para carregar os itens da API e gerar os cards
+async function carregarItens() {
+    try {
+        const response = await fetch('http://localhost:3000/api/itens');
+        const dados = await response.json();
+
+        itens = dados.data;
+
+        if (!itens || itens.length === 0) return;
+
+        const containerAchados = document.querySelector("#cardsAchados");
+        const containerPerdidos = document.querySelector("#cardsPerdidos");
+        containerAchados.innerHTML = "";
+        containerPerdidos.innerHTML = "";
+
+        // Divisão entre Achados e Perdidos
+        itens.forEach(item => {
+
+            // ❌ NÃO MOSTRA RETIRADOS
+            if (item.status === "Retirado") return;
+
+            const isAchado = item.status === "Achado";
+            const isPerdido = item.status === "Perdido";
+
+            // Se não for achado nem perdido, ignora
+            if (!isAchado && !isPerdido) return;
+
+            const container = isAchado ? containerAchados : containerPerdidos;
+
+            const card = `
+                <article class="card ${isAchado ? 'achado' : 'perdido'}">
+                    <header class="card-top">
+                        <h3>${item.nome}</h3>
+                    </header>
+
+                    <div class="card-body">
+                        <p class="descricao">${item.descricao}</p>
+
+                        <div class="meta">
+                            <div class="meta-item">
+                                <i class="fa-solid fa-user" style="color: #ffffff;"></i>
+                                ${item.Usuario_CPF}
+                            </div>
+
+                            <div class="meta-item">
+                                <i class="fa-solid fa-location-dot" style="color: #ffffff;"></i>
+                                ${item.local}
+                            </div>
+                        </div>
+
+                        <div class="card-sep"></div>
+
+                        <div class="card-footer">
+                            <span class="pill">${item.Usuario_CPF}</span>
+                            <span class="date">${new Date(item.data).toLocaleDateString("pt-BR")}</span>
+                        </div>
+                    </div>
+                </article>
+            `;
+
+            container.innerHTML += card;
+        });
+
+        // PAGINAÇÃO
+        setupPagination(
+            '.produtos-section',
+            '.card.achado',
+            5,
+            Math.ceil(itens.filter(i => i.status === "Achado").length / 5)
+        );
+
+        setupPagination(
+            '.perdidos',
+            '.card.perdido',
+            5,
+            Math.ceil(itens.filter(i => i.status === "Perdido").length / 5)
+        );
+
+    } catch (erro) {
+        console.error("Erro ao carregar itens:", erro);
+    }
+}
+
+carregarItens();
