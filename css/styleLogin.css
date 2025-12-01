@@ -8,24 +8,23 @@
 
 body {
   font-family: 'Open Sans', sans-serif;
-  background-color:rgb(239, 243, 255);
+  background-color: rgb(239, 243, 255);
 }
 
 .container {
-  display: grid;                
-  grid-template-columns: 1fr;  
-  grid-template-rows: 1fr;     
-  justify-items: center;       
-  align-items: center;         
-  height: 80vh;               
-  width: 80vw;                
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  justify-items: center;
+  align-items: center;
+  height: 80vh;
+  width: 80vw;
   margin: 0 auto;
   opacity: 0;
-  transform: translateY(50px); /* começa um pouco abaixo */
-  animation: appear 1s forwards; /* duração 1s, mantém estado final */
+  transform: translateY(50px);
+  animation: appear 1s forwards;
 }
 
-/* Definição da animação */
 @keyframes appear {
   to {
     opacity: 1;
@@ -33,22 +32,19 @@ body {
   }
 }
 
-
 .content {
   display: flex;
-  width: 100%;      
-  max-width: none;  
+  width: 100%;
+  max-width: none;
   min-height: 800px;
   background-color: #fff;
   border-radius: 15px;
   overflow: hidden;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   flex-wrap: wrap;
-  margin: auto; /* <-- garante centralização vertical e horizontal */
+  margin: auto;
   margin-top: 70px;
 }
-
-
 
 /* Coluna esquerda */
 .left {
@@ -61,14 +57,19 @@ body {
   align-items: center;
 }
 
+/* 🔥 TAMANHO DE TEXTO AJUSTADO (igual 2ª imagem) */
 .left .title {
   color: #F25C05;
-  font-size: 40px;
-  margin-bottom: 100px;
+  font-size: 32px; /* antes 40px */
+  margin-bottom: 50px;
   text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 4px solid #FFF;
+  width: 0;
+  animation: typing 2.5s steps(30, end) forwards, blink 0.7s step-end infinite;
 }
 
-/* Botão Google customizado */
 .google-btn {
   display: flex;
   align-items: center;
@@ -84,10 +85,6 @@ body {
   margin-bottom: 20px;
   cursor: pointer;
   transition: 0.3s;
-}
-
-.google-btn i {
-  font-size: 18px;
 }
 
 .google-btn:hover {
@@ -128,8 +125,8 @@ body {
   border: 1px solid #F25C05;
   color: #fff;
   padding: 12px;
-  border-radius: 8px; /* mantendo a forma original */
-  font-size: 16px;    /* tamanho original presumido, ajuste se quiser maior */
+  border-radius: 8px;
+  font-size: 16px;
   font-weight: bold;
   margin-bottom: 20px;
   cursor: pointer;
@@ -140,7 +137,6 @@ body {
   background: transparent;
   color: #F25C05;
 }
-
 
 /* Coluna direita */
 .right {
@@ -156,43 +152,44 @@ body {
   padding: 50px 30px;
 }
 
+/* 🔥 Texto igual à 2ª imagem */
 .right h2 {
-  font-size: 40px;
+  font-size: 32px; /* antes 40px */
   margin-bottom: 15px;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 4px solid #164194;
+  width: 0;
+  animation: typing 2.5s steps(30, end) forwards, blink 0.7s step-end infinite;
 }
 
 .right p {
   font-size: 15px;
   line-height: 20px;
   margin-bottom: 20px;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 4px solid #164194;
+  width: 0;
+  animation: typing 2.5s steps(40, end) forwards, blink 0.7s step-end infinite;
 }
 
-/* Imagem dos cachorros responsiva */
 .right img {
   width: 100%;
-  max-width: 450px; /* limite máximo */
-  height: auto;     /* mantém proporção */
+  max-width: 450px;
+  height: auto;
   margin-top: 20px;
 }
 
-/* Responsividade para telas menores */
+/* RESPONSIVIDADE */
 @media (max-width: 768px) {
-  .content {
-    flex-direction: column;
-    min-height: auto;
-  }
-
-  .left, .right {
-    width: 100%;
-    padding: 30px 20px;
-  }
 
   .left .title {
-    font-size: 28px;
+    font-size: 24px;
   }
 
   .right h2 {
-    font-size: 22px;
+    font-size: 24px;
   }
 
   .right p {
@@ -201,174 +198,45 @@ body {
 }
 
 @media (max-width: 480px) {
+
   .left .title {
-    font-size: 40px;
+    font-size: 20px;
   }
 
   .right h2 {
-    font-size: 30px;
+    font-size: 20px;
   }
 
   .right p {
-    font-size: 25px;
+    font-size: 14px;
   }
 
   .google-btn {
-    padding: 10px 20px;
-    font-size: 20px;
+    font-size: 16px;
   }
 
   .btn {
-    padding: 10px;
-    font-size: 20px;
+    font-size: 16px;
   }
-}
-/* Efeito digitando */
-.left .title {
-  color: #F25C05;
-  font-size: 40px;
-  margin-bottom: 50px;
-  text-align: center;
-  white-space: nowrap;       /* evita quebra de linha */
-  overflow: hidden;          /* esconde o texto não digitado */
-  border-right: 4px solidrgb(255, 255, 255); /* cursor piscando */
-  width: 0;                  /* começa invisível */
-  animation: typing 3s steps(30, end) forwards, blink 0.7s step-end infinite;
-}
-.right.h2 {
-  color: #164194;
-  font-size: 40px;
-  margin-bottom: 20px;
-  text-align: center;
-  white-space: nowrap;       /* evita quebra de linha */
-  overflow: hidden;          /* esconde o texto não digitado */
-  border-right: 4px solidrgb(255, 255, 255); /* cursor piscando */
-  width: 0;                  /* começa invisível */
-  animation: typing 3s steps(30, end) forwards, blink 0.7s step-end infinite;
-}
 
-/* Animação de digitação */
-@keyframes typing {
-  from { width: 0 }
-  to { width: 18ch } /* ajuste para o tamanho do texto em caracteres */
-}
-
-/* Animação do cursor piscando */
-@keyframes blink {
-  50% { border-color: transparent; }
-}
-.typing-text {
-  font-family: 'Open Sans', sans-serif;
-  color: #F25C05;
-  font-size: 24px;
-  line-height: 1.5;
-}
-
-/* Cada linha com efeito digitando */
-.typing-text .line {
-  white-space: nowrap;
-  overflow: hidden;
-  border-right: 4px solid #F25C05;
-  width: 0;
-  animation: typing 2s steps(40, end) forwards, blink 0.7s step-end infinite;
-}
-.typing-text {
-  font-family: 'Open Sans', sans-serif;
-  color: #F25C05;
-  font-size: 24px;
-  line-height: 1.5;
-}
-
-/* Cursor piscando */
-@keyframes blink {
-  50% { border-color: transparent; }
-}
-
-/* Animação digitando: largura de 100% da linha */
-@keyframes typing {
-  from { width: 0; }
-  to { width: 100%; }
-}
-
-/* Sequência das linhas com delay */
-.typing-text .line:nth-child(1) {
-  animation-delay: 0s;
-}
-.typing-text .line:nth-child(2) {
-  animation-delay: 3.5s; /* aparece após a primeira linha */
-}
-.typing-text .line:nth-child(3) {
-  animation-delay: 7s; /* aparece após a segunda linha */
-}
-
-/* ANIMAÇÃO DE DIGITAÇÃO GLOBAL */
-@keyframes typing {
-  from { width: 0; }
-  to { width: 100%; }
-}
-
-@keyframes blink {
-  50% { border-color: transparent; }
-}
-
-/* CONFIGURAÇÃO BASE PARA EFEITO DE DIGITAÇÃO */
-.typing-base {
-  white-space: nowrap;
-  overflow: hidden;
-  border-right: 4px solid #F25C05;
-  display: inline-block;
-  width: 0;
-  animation: typing 2.5s steps(40, end) forwards, blink 0.7s step-end infinite;
-}
-
-/* APLICANDO ANIMAÇÃO AUTOMATICAMENTE PELO NOME DAS CLASSES EXISTENTES */
-
-/* Título da esquerda */
-.left .title {
-  color: #F25C05;
-  font-size: 40px;
-  margin-bottom: 50px;
-  text-align: center;
-  white-space: nowrap;
-  overflow: hidden;
-  border-right: 4px solid #FFF;
-  width: 0;
-  animation: typing 2.5s steps(30, end) forwards, blink 0.7s step-end infinite;
-}
-
-/* Título da direita */
-.right h2 {
-  white-space: nowrap;
-  overflow: hidden;
-  border-right: 4px solid  #164194;
-  width: 0;
-  animation: typing 2.5s steps(30, end) forwards, blink 0.7s step-end infinite;
-  
-}
-
-/* Parágrafos da direita */
-.right p {
-  white-space: nowrap;
-  overflow: hidden;
-  border-right: 4px   #164194;
-  width: 0;
-  animation: typing 2.5s steps(40, end) forwards, blink 0.7s step-end infinite;
-
-}
-
-/* Botão Google */
-
-/* Responsividade – desativa efeito para telas muito pequenas para evitar quebras */
-@media (max-width: 480px) {
+  /* remove animação nas telas pequenas */
   .left .title,
   .right h2,
-  .right p,
-  .google-btn,
-  .btn {
+  .right p {
     white-space: normal;
     overflow: visible;
     border-right: none;
     animation: none;
     width: auto;
   }
+}
+
+/* EFEITOS DIGITAÇÃO */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
 }
