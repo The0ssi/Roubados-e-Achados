@@ -59,7 +59,7 @@ if (!isLoggedIn) {
 // SE FOR ALUNO
 if (!isAdmin) {
     registerButton.textContent = "Ver todos itens";
-    registerButton.href = "catalogo.html";   // coloque o nome da sua página de catálogo
+    registerButton.href = "Catalogo.html";   // coloque o nome da sua página de catálogo
 }
 
 // Função para configurar a paginação para uma seção específica
@@ -190,3 +190,4 @@ async function carregarItens() {
 }
 
 carregarItens();
+
