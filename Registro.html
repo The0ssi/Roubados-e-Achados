@@ -52,61 +52,62 @@
     
   <!-- FORMULÁRIO -->
   <section class="form-section">
-  <div class="form-container">
-    <form id="formulario" class="lost-item-form">
-      <div class="form-content">
-        <div class="form-fields">
-          <div class="form-row">
-            <input type="text" placeholder="Nome do aluno" required>
-            <input type="text" placeholder="Matricula" required>
-          </div>
-          <div class="form-row">
-            <input type="text" class="item-input" placeholder="Objeto / Item achado" required>
-            <input type="date" required>
-          </div>
+    <div class="form-container">
+      <form id="formulario" class="lost-item-form">
+        <div class="form-content">
+          <div class="form-fields">
+            <div class="form-row">
+              <input type="text" name="nome_aluno" placeholder="Cpf aluno" required>
+              <input type="text" name="matricula" placeholder="Nome do aluno" required>
+            </div>
+            <div class="form-row">
+              <input type="text" name="item_achado" class="item-input" placeholder="Objeto / Item achado" required>
+              <input type="date" name="data_encontrado" required>
+            </div>
 
-          <div class="form-row">
-            <select name="Local última vez visto">
-              <option value="nao">Local que foi encontrado</option>
-              <option value="sim">Refeitorio</option>
-              <option value="nao">Sala de informatica 1</option>
-              <option value="nao">Sala de informatica 2</option>
-              <option value="nao">Auditorio</option>
-              <option value="nao">Banheiro</option>
-              <option value="nao">Patio</option>
-              <option value="nao">Desconhecido</option>
-            </select>
-            <select name="Período última vez visto">
-              <option value="nao">Período que foi encontrado</option>
-              <option value="sim">Amanha</option>
-              <option value="nao">Tarde</option>
-              <option value="nao">Noite</option>
-            </select>
-          </div>
+            <div class="form-row">
+              <select name="local_ultima_vez_visto">
+                <option value="nao">Local que foi encontrado</option>
+                <option value="refeitorio">Refeitório</option>
+                <option value="sala_informatica_1">Sala de informática 1</option>
+                <option value="sala_informatica_2">Sala de informática 2</option>
+                <option value="auditorio">Auditório</option>
+                <option value="banheiro">Banheiro</option>
+                <option value="patio">Pátio</option>
+                <option value="desconhecido">Desconhecido</option>
+              </select>
+              <select name="periodo_ultima_vez_visto">
+                <option value="nao">Período que foi encontrado</option>
+                <option value="manha">Manhã</option>
+                <option value="tarde">Tarde</option>
+                <option value="noite">Noite</option>
+              </select>
+            </div>
 
           <div class="filters">
-            <label><input type="checkbox"> Eletrônicos</label>
-            <label><input type="checkbox"> Vestimentas</label>
-            <label><input type="checkbox"> Acessórios</label>
-            <label><input type="checkbox"> Chaves</label>
-            <label><input type="checkbox"> Documentos</label>
-            <label><input type="checkbox"> Outros</label>
+            <label><input type="checkbox" name="categorias[]" value="eletronicos"> Eletrônicos</label>
+            <label><input type="checkbox" name="categorias[]" value="vestimentas"> Vestimentas</label>
+            <label><input type="checkbox" name="categorias[]" value="acessorios"> Acessórios</label>
+            <label><input type="checkbox" name="categorias[]" value="chaves"> Chaves</label>
+            <label><input type="checkbox" name="categorias[]" value="documentos"> Documentos</label>
+            <label><input type="checkbox" name="categorias[]" value="outros"> Outros</label>
           </div>
 
-          <textarea placeholder="Descrição do item"></textarea>
+          <textarea name="descricao_item" placeholder="Descrição do item"></textarea>
         </div>
 
-       <div class="button-container">
-          <button type="submit" class="btn-registrar">Registra item</button>
+        <div class="button-container">
+          <button type="submit" class="btn-registrar">Registrar item</button>
         </div>
       </div>
     </form>
 
-    <div class="image-upload">
-      <div class="upload-box">
-        <i class="fa-solid fa-image"></i>
-        <p>Escolha ou arraste uma imagem</p>
-        <input id="fileInput" type="file" hidden>
+      <div class="image-upload">
+        <div class="upload-box">
+          <i class="fa-solid fa-image"></i>
+          <p>Escolha ou arraste uma imagem</p>
+          <input id="fileInput" type="file" hidden>
+        </div>
       </div>
     </div>
   </section>
