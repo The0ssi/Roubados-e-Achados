@@ -71,3 +71,61 @@ function changeTab(tab) {
 
   console.log("A aba selecionada é: " + tab);
 }
+
+document.getElementById('formulario').addEventListener('submit', function(event) {
+  event.preventDefault();  // Impede o envio padrão do formulário
+
+  // Coleta os dados do formulário
+  const nomeAluno = document.querySelector('input[name="nome_aluno"]').value;
+  const matricula = document.querySelector('input[name="matricula"]').value;
+  const itemAchado = document.querySelector('input[name="item_achado"]').value;
+  const dataEncontrado = document.querySelector('input[name="data_encontrado"]').value;
+  const localUltimaVezVisto = document.querySelector('select[name="local_ultima_vez_visto"]').value;
+  const periodoUltimaVezVisto = document.querySelector('select[name="periodo_ultima_vez_visto"]').value;
+  const descricaoItem = document.querySelector('textarea[name="descricao_item"]').value;
+
+  // Captura as categorias (checkboxes)
+  const categorias = [];
+  document.querySelectorAll('input[name="categorias[]"]:checked').forEach(function(checkbox) {
+    categorias.push(checkbox.value);
+  });
+
+  // Recupera o status da aba selecionada (achado ou perdido)
+  const status = document.querySelector('.lost-item-form').classList.contains('achado') ? 'Achado' : 'Perdido';
+
+  // Preparar o payload (dados) para enviar
+  const payload = {
+    nome: itemAchado,
+    data: dataEncontrado,
+    local: localUltimaVezVisto,
+    periodo: periodoUltimaVezVisto,
+    categoria: categorias.join(", "),  // Caso queira enviar as categorias como uma string separada por vírgula
+    descricao: descricaoItem,
+    status: status,  // Status baseado na aba selecionada
+    Usuario_CPF: matricula  // Usando o número de matrícula como CPF (se for o caso)
+  };
+
+  // Enviar dados para o servidor usando fetch
+  fetch('http://localhost:3000/api/itens', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(payload)
+  })
+  .then(response => response.json())
+  .then(data => {
+    if (data.message === "Item cadastrado") {
+      alert("Item registrado com sucesso!");
+      // Limpar o formulário após o sucesso
+      document.getElementById('formulario').reset();
+    } else {
+      alert("Erro ao registrar o item: " + (data.error || "Erro desconhecido"));
+    }
+  })
+  .catch(error => {
+    console.error('Erro ao enviar dados:', error);
+    alert("Erro de conexão. Tente novamente.");
+  });
+});
+
