@@ -23,6 +23,7 @@ body {
   animation: appear 0.8s ease-out forwards;
 }
 
+
 @keyframes appear {
   0% {
     opacity: 0;
@@ -251,4 +252,57 @@ body {
 
 @keyframes blink {
   50% { border-color: transparent; }
+}
+
+/* =============================== */
+/*  MOBILE: DEIXAR METADE METADE   */
+/* =============================== */
+
+@media (max-width: 768px) {
+
+  /* O container externo */
+  .container {
+    height: auto;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* O card que contém esquerda + direita */
+  .content {
+    flex-direction: column;
+    height: 100vh;        /* cobre a tela inteira */
+    min-height: 100vh;
+    border-radius: 20px;
+    overflow: hidden;
+  }
+
+  /* Parte branca (login) ocupa 50% */
+  .left {
+    width: 100%;
+    height: 50%;
+    padding: 35px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Parte azul ocupa 50% */
+  .right {
+    width: 100%;
+    height: 50%;
+    padding: 35px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  /* Imagem ajustada para caber sem estourar */
+  .right img {
+    max-height: 45%;
+    max-width: 80%;
+    object-fit: contain;
+  }
 }
