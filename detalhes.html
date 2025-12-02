@@ -32,8 +32,8 @@
     <!-- Bloco de detalhes -->
     <section class="detalhes">
       <div class="texto">
-        <h1>Fone de Ouvido</h1>
-        <p>
+        <h1 id="det-nome">Fone de Ouvido</h1>
+        <p id="det-descricao">
           Os fones de ouvido auriculares, popularmente chamados de earbuds, são periféricos de áudio que se encaixam na
           concha externa da orelha, sem vedar completamente o canal auditivo.
           Oferecem menor isolamento acústico, além de serem fabricados com materiais mais leves.
@@ -46,27 +46,28 @@
         <div class="info">
           <div>
             <h4>Último local</h4>
-            <p><i class="fas fa-map-marker-alt"></i> Refeitório</p>
+           <p><i class="fas fa-map-marker-alt"></i> <span id="det-local"></span></p>
           </div>
           <div>
             <h4>Data</h4>
-            <p><i class="fas fa-calendar-alt"></i> 18/9/2025</p>
+            <p><i class="fas fa-calendar-alt"></i> <span id="det-data"></span></p>
           </div>
           <div>
             <h4>Período</h4>
-            <p><i class="fas fa-clock"></i> Desconhecido</p>
+           <p><i class="fas fa-clock"></i> <span id="det-periodo"></span></p>
           </div>
           <div>
             <h4>Pessoa</h4>
-            <p><i class="fas fa-user"></i> nomedoaluno@aluno.senai.br</p>
+            <p><i class="fas fa-user"></i> <span id="det-usuario"></span></p>
+
           </div>
           <div>
             <h4>ID Item</h4>
-            <p><i class="fa-solid fa-id-card"></i> 276E892A69</p>
+            <p><i class="fa-solid fa-id-card"></i> <span id="det-id"></span></p>
           </div>
           <!-- Botão centralizado abaixo do formulário -->
           <div class="button-container">
-            <button type="submit" class="btn-registrar">Achado</button>
+            <button type="submit" class="btn-registrar register-button">Achado</button>
           </div>
           </form>
         </div>
@@ -74,130 +75,18 @@
 
       <div class="item-imagem">
         <div class="image-placeholder">
-          <img src="img/catagolo/image 25-1.png" alt="Sem imagem" class="img-galeria">
+          <img src="img/catagolo/image 25-1.png"alt="Imagem do item"class="img-galeria">
         </div>
       </div>
     </section>
 
     <!--CONTAINER CARD-->
     <div class="cards-wrapper">
-
       <!--CONTAINER CARD 2-->
-      <div class="cards-container">
-        <!--CARD-->
-        <article class="card achado">
-          <header class="card-top">
-            <h3>Fone de ouvido</h3>
-          </header>
-          <div class="card-body">
-            <p class="descricao">
-              Fone de ouvido genérico, modelo intra-auricular (de entrada no ouvido), com fio. Cor predominante preto de
-              plástico e borracha de silicone nas ponteiras.
-            </p>
-            <div class="meta">
-              <div class="meta-item"><i class="fa-solid fa-user" style="color: #ffffff;"></i></span> Irmão de bota</div>
-              <div class="meta-item"><i class="fa-solid fa-location-dot" style="color: #ffffff;"></i> DS</div>
-            </div>
-            <div class="card-sep"></div>
-            <div class="card-footer">
-              <span class="pill">Card usuário</span>
-              <span class="date">25 / 09</span>
-            </div>
-          </div>
-        </article>
-        <!--CARD-->
-        <!--CARD-->
-        <article class="card achado">
-          <header class="card-top">
-            <h3>Fone de ouvido</h3>
-          </header>
-          <div class="card-body">
-            <p class="descricao">
-              Fone de ouvido genérico, modelo intra-auricular (de entrada no ouvido), com fio. Cor predominante preto de
-              plástico e borracha de silicone nas ponteiras.
-            </p>
-            <div class="meta">
-              <div class="meta-item"><i class="fa-solid fa-user" style="color: #ffffff;"></i></span> Irmão de bota</div>
-              <div class="meta-item"><i class="fa-solid fa-location-dot" style="color: #ffffff;"></i> DS</div>
-            </div>
-            <div class="card-sep"></div>
-            <div class="card-footer">
-              <span class="pill">Card usuário</span>
-              <span class="date">25 / 09</span>
-            </div>
-          </div>
-        </article>
-        <!--CARD-->
-        <!--CARD-->
-        <article class="card achado">
-          <header class="card-top">
-            <h3>Fone de ouvido</h3>
-          </header>
-          <div class="card-body">
-            <p class="descricao">
-              Fone de ouvido genérico, modelo intra-auricular (de entrada no ouvido), com fio. Cor predominante preto de
-              plástico e borracha de silicone nas ponteiras.
-            </p>
-            <div class="meta">
-              <div class="meta-item"><i class="fa-solid fa-user" style="color: #ffffff;"></i></span> Irmão de bota</div>
-              <div class="meta-item"><i class="fa-solid fa-location-dot" style="color: #ffffff;"></i> DS</div>
-            </div>
-            <div class="card-sep"></div>
-            <div class="card-footer">
-              <span class="pill">Card usuário</span>
-              <span class="date">25 / 09</span>
-            </div>
-          </div>
-        </article>
-        <!--CARD-->
-        <!--CARD-->
-        <article class="card achado">
-          <header class="card-top">
-            <h3>Fone de ouvido</h3>
-          </header>
-          <div class="card-body">
-            <p class="descricao">
-              Fone de ouvido genérico, modelo intra-auricular (de entrada no ouvido), com fio. Cor predominante preto de
-              plástico e borracha de silicone nas ponteiras.
-            </p>
-            <div class="meta">
-              <div class="meta-item"><i class="fa-solid fa-user" style="color: #ffffff;"></i></span> Irmão de bota</div>
-              <div class="meta-item"><i class="fa-solid fa-location-dot" style="color: #ffffff;"></i> DS</div>
-            </div>
-            <div class="card-sep"></div>
-            <div class="card-footer">
-              <span class="pill">Card usuário</span>
-              <span class="date">25 / 09</span>
-            </div>
-          </div>
-        </article>
-        <!--CARD-->
-        <!--CARD-->
-        <article class="card achado">
-          <header class="card-top">
-            <h3>Fone de ouvido</h3>
-          </header>
-          <div class="card-body">
-            <p class="descricao">
-              Fone de ouvido genérico, modelo intra-auricular (de entrada no ouvido), com fio. Cor predominante preto de
-              plástico e borracha de silicone nas ponteiras.
-            </p>
-            <div class="meta">
-              <div class="meta-item"><i class="fa-solid fa-user" style="color: #ffffff;"></i></span> Irmão de bota</div>
-              <div class="meta-item"><i class="fa-solid fa-location-dot" style="color: #ffffff;"></i> DS</div>
-            </div>
-            <div class="card-sep"></div>
-            <div class="card-footer">
-              <span class="pill">Card usuário</span>
-              <span class="date">25 / 09</span>
-            </div>
-          </div>
-        </article>
-        <!--CARD-->
-      </div>
+      <div class="cards-container" id="cardsAchados"></div>
       <!--CONTAINER CARD 2-->
     </div>
-    <!--CONTAINER CARD-->
+
   </main>
   <!--RODAPÉ-->
   <footer class="footer">
