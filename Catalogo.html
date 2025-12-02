@@ -29,7 +29,8 @@
             <div class="tabs">
               <div class="line"></div>
               <button class="tab" id="achado" onclick="changeTab('achado')">Página de achados</button>
-              <button class="tab" id="perdido" onclick="changeTab('perdido')">Página de perdidos</button>            
+              <button class="tab" id="perdido" onclick="changeTab('perdido')">Página de perdidos</button>
+            
           </div>
         </div>
     </section>
@@ -72,117 +73,9 @@
           </div>
       </div>
     <div class="main-container">
-      <!-- Filtros -->
-      <aside class="filtro-container">
-        <h4 class="filtro-titulo">Opções de Filtro</h4>
-        <div class="filtro-secao">
-          <h6 class="filtro-subtitulo">Por Categoria</h6>
-          <label class="filtro-checkbox">
-            <input type="checkbox">Eletronicos</label>
-          <label class="filtro-checkbox">
-            <input type="checkbox">Vestimentas</label>
-          <label class="filtro-checkbox">
-            <input type="checkbox">Acessorios</label>
-          <label class="filtro-checkbox">
-            <input type="checkbox">Chaves</label>
-          <label class="filtro-checkbox">
-            <input type="checkbox">Papelaria</label>
-          <label class="filtro-checkbox">
-            <input type="checkbox">Outros</label>
-        </div>
-
-        <div class="filtro-secao">
-          <h6 class="filtro-subtitulo">Por Data</h6>
-          <input type="date" id="filtro-input" class="filtro-input" placeholder="00 / 00 / 0000">
-        </div>
-
-        <div class="filtro-secao">
-          <h6 class="filtro-subtitulo">Por Local</h6>
-          <label class="filtro-checkbox">
-            <input type="checkbox">Refeitorio</label>
-          <label class="filtro-checkbox">
-            <input type="checkbox">Sala de Informatica</label>
-          <label class="filtro-checkbox">
-            <input type="checkbox">Secretaria</label>
-          <label class="filtro-checkbox">
-            <input type="checkbox">Patio</label>
-          <label class="filtro-checkbox">
-            <input type="checkbox">Sala 54</label>
-          <label class="filtro-checkbox">
-            <input type="checkbox">Sala 36</label>
-        </div>
-        <button class="btn-salvar-filtros">
-          Salvar filtros
-        </button>
-      </aside>
-
       <!-- LISTA DE CARDS -->
-      <section class="cards-container">
-        <!-- Card 1 (com imagem) -->
-        <div class="card-item">
-            <div class="card-img">
-                <img src="img/catagolo/foneee.jpg" alt="Fone de ouvido">
-                <span class="card-title">Fone de ouvido</span>
-            </div>
-            <p class="card-desc">Fone de ouvido bluetooth rosa. Tem adesivos colados atrás.</p>
-
-            <div class="card-info">
-                <p><i class="fa fa-user"></i> Carmem</p>
-                <p><i class="fa fa-map-marker"></i> Refeitório</p>
-            </div>
-        </div>
-        <!-- Card 2 (SEM imagem = cinza + ícone) -->
-        <div class="card-item">
-            <div class="card-img placeholder">
-                <i class="fa-solid fa-images fa-xl" style="color: #4c47c8;"></i>
-                <span class="card-title">Fone de ouvido</span>
-            </div>
-            <p class="card-desc">Fone de ouvido bluetooth rosa. Tem adesivos colados atrás.</p>
-            <div class="card-info">
-                <p><i class="fa fa-user"></i> Carmem</p>
-                <p><i class="fa fa-map-marker"></i> Refeitório</p>
-            </div>
-        </div>
-        <!-- Card 1 (com imagem) -->
-        <div class="card-item">
-            <div class="card-img">
-                <img src="img/catagolo/foneee.jpg" alt="Fone de ouvido">
-                <span class="card-title">Fone de ouvido</span>
-            </div>
-            <p class="card-desc">Fone de ouvido bluetooth rosa. Tem adesivos colados atrás.</p>
-
-            <div class="card-info">
-                <p><i class="fa fa-user"></i> Carmem</p>
-                <p><i class="fa fa-map-marker"></i> Refeitório</p>
-            </div>
-        </div>
-        <!-- Card 1 (com imagem) -->
-        <div class="card-item">
-            <div class="card-img">
-                <img src="img/catagolo/foneee.jpg" alt="Fone de ouvido">
-                <span class="card-title">Fone de ouvido</span>
-            </div>
-            <p class="card-desc">Fone de ouvido bluetooth rosa. Tem adesivos colados atrás.</p>
-
-            <div class="card-info">
-                <p><i class="fa fa-user"></i> Carmem</p>
-                <p><i class="fa fa-map-marker"></i> Refeitório</p>
-            </div>
-        </div>
-        <!-- Card 1 (com imagem) -->
-        <div class="card-item">
-            <div class="card-img">
-                <img src="img/catagolo/foneee.jpg" alt="Fone de ouvido">
-                <span class="card-title">Fone de ouvido</span>
-            </div>
-            <p class="card-desc">Fone de ouvido bluetooth rosa. Tem adesivos colados atrás.</p>
-
-            <div class="card-info">
-                <p><i class="fa fa-user"></i> Carmem</p>
-                <p><i class="fa fa-map-marker"></i> Refeitório</p>
-            </div>
-        </div>
-      </section>
+      <section class="cards-container" id="cardsAchados"></section>
+      <section class="cards-container" id="cardsPerdidos" style="display: none;"></section>
     </div>
 
     <div class="pagination">
