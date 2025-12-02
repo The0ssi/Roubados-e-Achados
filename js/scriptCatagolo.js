@@ -1,60 +1,30 @@
 function changeTab(tab) {
-  console.log("Função changeTab chamada com:", tab);
+    console.log("Aba selecionada:", tab);
 
-  const line = document.querySelector('.line');
-  const tabs = document.querySelectorAll('.tab');
+    const line = document.querySelector('.line');
+    const achados = document.getElementById("cardsAchados");
+    const perdidos = document.getElementById("cardsPerdidos");
 
-  // Verificando se a linha e as abas existem
-  if (!line || tabs.length === 0) {
-    console.error("❌ Erro: Elementos de linha ou abas não encontrados!");
-    return;
-  }
+    // ====== mover linha laranja ======
+    if (tab === "achado") {
+        line.style.left = "0";
+        line.style.width = "50%";
+    } else {
+        line.style.left = "50%";
+        line.style.width = "50%";
+    }
 
-  // Atualizando a posição da linha conforme a aba selecionada
-  if (tab === 'achado') {
-    console.log("Movendo linha para Achado...");
-    line.style.left = '0';  // Move a linha para a esquerda (início)
-    line.style.width = '50%';  // Linha ocupa 50% da largura
-  } else if (tab === 'perdido') {
-    console.log("Movendo linha para Perdido...");
-    line.style.left = '50%';  // Move a linha para 50% (direita)
-    line.style.width = '50%';  // Linha ocupa os outros 50% da largura
-  }
+    // ====== mostrar lista correta ======
+    achados.style.display = tab === "achado" ? "grid" : "none";
+    perdidos.style.display = tab === "perdido" ? "grid" : "none";
 
-  // Verificando se o título e a descrição devem ser alterados
-  const title = document.querySelector('.catalog-title');
-  const description = document.querySelector('.catalog-description');
-  const frase = document.querySelector('.catalogo-frase');
+    // ====== resetar paginação ======
+    currentPage = 0;
 
-  if (tab === 'achado') {
-    if (title) title.textContent = 'Registro dos itens achados';
-    if (description) description.textContent = 'Registro de achados — seu item pode estar aqui.';
-    if (frase) frase.textContent = 'Encontre itens que foram encontrados e estão esperando seus donos.';
-  } else if (tab === 'perdido') {
-    if (title) title.textContent = 'Registro dos itens perdidos';
-    if (description) description.textContent = 'Registro de perdidos — seu item pode estar aqui.';
-    if (frase) frase.textContent = 'Veja os itens perdidos e ajude-os a ser encontrados.';
-  }
-
-  // Controlando a visibilidade das listas de itens
-  const achados = document.getElementById("cardsAchados");
-  const perdidos = document.getElementById("cardsPerdidos");
-
-  if (!achados || !perdidos) {
-    console.error("❌ Containers de cards não encontrados!");
-    return;
-  }
-
-  if (tab === 'achado') {
-    achados.style.display = "grid";
-    perdidos.style.display = "none";
-  } else if (tab === 'perdido') {
-    achados.style.display = "none";
-    perdidos.style.display = "grid";
-  }
-
-  console.log("A aba selecionada é:", tab);
+    // ====== atualizar catálogo ======
+    atualizarCatalogo();
 }
+
 
 
 
@@ -211,17 +181,3 @@ function criarCard(item) {
     `;
 }
 
-// ===============================
-// MUDAR TABS (ACHADO/PERDIDO)
-// ===============================
-function changeTab(tipo) {
-    currentPage = 0;
-
-    document.getElementById("cardsAchados").style.display =
-        tipo === "achado" ? "grid" : "none";
-
-    document.getElementById("cardsPerdidos").style.display =
-        tipo === "perdido" ? "grid" : "none";
-
-    atualizarCatalogo();
-}
