@@ -1,12 +1,22 @@
 // Função para configurar a paginação para uma seção específica
-function setupPagination(sectionSelector, cardSelector, cardsPorPagina, totalPaginas) {
+function setupPagination(sectionSelector, cardSelector, cardsPorPagina) {
   const cards = document.querySelectorAll(`${sectionSelector} ${cardSelector}`);
   const paginationDotsContainer = document.querySelector(`${sectionSelector} .pagination-dots`);
+
+  if (!paginationDotsContainer) return;
+
+  const totalCards = cards.length;
+
+  // Calcula total de páginas automaticamente
+  let totalPaginas = Math.ceil(totalCards / cardsPorPagina);
+
+  // Limita entre 1 e 3
+  totalPaginas = Math.max(1, Math.min(totalPaginas, 3));
 
   // Limpa bolinhas anteriores
   paginationDotsContainer.innerHTML = '';
 
-  // Cria bolinhas de acordo com o total de páginas
+  // Cria bolinhas
   for (let i = 0; i < totalPaginas; i++) {
     const dot = document.createElement('span');
     dot.classList.add('dot');
@@ -14,30 +24,31 @@ function setupPagination(sectionSelector, cardSelector, cardsPorPagina, totalPag
     paginationDotsContainer.appendChild(dot);
 
     dot.addEventListener('click', () => {
-      // Atualiza bolinhas ativas
-      document.querySelectorAll(`${sectionSelector} .dot`).forEach(d => d.classList.remove('active'));
+      // Atualiza bolinha ativa
+      paginationDotsContainer
+        .querySelectorAll('.dot')
+        .forEach(d => d.classList.remove('active'));
       dot.classList.add('active');
 
-      // Exibe cards do grupo clicado
+      // Mostra cards da página clicada
       cards.forEach((card, index) => {
-        if (index >= i * cardsPorPagina && index < (i + 1) * cardsPorPagina) {
-          card.style.display = 'block';
-        } else {
-          card.style.display = 'none';
-        }
+        const inicio = i * cardsPorPagina;
+        const fim = inicio + cardsPorPagina;
+
+        card.style.display =
+          index >= inicio && index < fim ? 'block' : 'none';
       });
     });
   }
 
-  // Exibe os primeiros cards ao carregar
+  // Mostra os primeiros cards ao carregar
   cards.forEach((card, index) => {
     card.style.display = index < cardsPorPagina ? 'block' : 'none';
   });
 }
-
 setTimeout(() => {
-    setupPagination('.produtos-section', '.card.achado', 5, 3);
-    setupPagination('.perdidos', '.card.perdido', 5, 3);
+  setupPagination('.produtos-section', '.card.achado', 5);
+  setupPagination('.perdidos', '.card.perdido', 5);
 }, 500);
 
 
@@ -62,48 +73,9 @@ if (!isAdmin) {
     registerButton.href = "Catalogo.html";   // coloque o nome da sua página de catálogo
 }
 
-// Função para configurar a paginação para uma seção específica
-function setupPagination(sectionSelector, cardSelector, cardsPorPagina, totalPaginas) {
-  const cards = document.querySelectorAll(`${sectionSelector} ${cardSelector}`);
-  const paginationDotsContainer = document.querySelector(`${sectionSelector} .pagination-dots`);
-
-  // Limpa bolinhas anteriores
-  paginationDotsContainer.innerHTML = '';
-
-  // Cria bolinhas de acordo com o total de páginas
-  for (let i = 0; i < totalPaginas; i++) {
-    const dot = document.createElement('span');
-    dot.classList.add('dot');
-    if (i === 0) dot.classList.add('active');
-    paginationDotsContainer.appendChild(dot);
-
-    dot.addEventListener('click', () => {
-      // Atualiza bolinhas ativas
-      document.querySelectorAll(`${sectionSelector} .dot`).forEach(d => d.classList.remove('active'));
-      dot.classList.add('active');
-
-      // Exibe cards do grupo clicado
-      cards.forEach((card, index) => {
-        if (index >= i * cardsPorPagina && index < (i + 1) * cardsPorPagina) {
-          card.style.display = 'block';
-        } else {
-          card.style.display = 'none';
-        }
-      });
-    });
-  }
-
-  // Exibe os primeiros cards ao carregar
-  cards.forEach((card, index) => {
-    card.style.display = index < cardsPorPagina ? 'block' : 'none';
-  });
+function abrirDetalhes(id) {
+    window.location.href = `detalhes.html?id=${id}`;
 }
-
-setTimeout(() => {
-    setupPagination('.produtos-section', '.card.achado', 5, 3);
-    setupPagination('.perdidos', '.card.perdido', 5, 3);
-}, 500);
-
 
 // Função para carregar os itens da API e gerar os cards
 // Função para carregar os itens da API e gerar os cards
@@ -136,11 +108,12 @@ async function carregarItens() {
             const container = isAchado ? containerAchados : containerPerdidos;
 
             const card = `
-                <article class="card ${isAchado ? 'achado' : 'perdido'}">
-                    <header class="card-top">
-                        <h3>${item.nome}</h3>
-                    </header>
-
+              <article class="card ${isAchado ? 'achado' : 'perdido'}" 
+                      data-id="${item.id}" 
+                      onclick="abrirDetalhes(${item.id})">
+                  <header class="card-top">
+                      <h3>${item.nome}</h3>
+                  </header>
                     <div class="card-body">
                         <p class="descricao">${item.descricao}</p>
 
