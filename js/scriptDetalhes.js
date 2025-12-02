@@ -153,6 +153,9 @@ if (!isAdmin) {
   registerButton.style.display = "none";
 }
 
+  document.querySelector(".register-button").addEventListener("click", () => {
+    window.location.href = "retiradaSecretaria.html";
+  });
 
 
 // Função para carregar os itens da API e gerar os cards
